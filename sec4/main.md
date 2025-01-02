@@ -25,6 +25,8 @@ sudo apt install -y libvirt-daemon libvirt-daemon-system libvirt-clients qemu-kv
 sudo systemctl status libvirtd
 ```
 
+- Ubuntuの仮想マシンが起動に失敗するため、ebisugawaとnijyoをDebian 10に変更した
+
 ## VirtualBox 7.0のインストール方法
 - gptの解答をそのままコピペ。うまく実行できた。
 はい、VirtualBox 6.1.50は古いバージョンですね。Ubuntu上で最新版のVirtualBox 7.0をインストールする手順を説明します：
