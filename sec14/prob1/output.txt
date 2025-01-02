@@ -1,0 +1,51 @@
+
+PLAY [How to use the community.general.read_csv module.] ***********************
+
+TASK [Gathering Facts] *********************************************************
+ok: [marutamachi]
+
+TASK [Import the CSV file.] ****************************************************
+ok: [marutamachi -> localhost]
+
+TASK [Display the loaded content.] *********************************************
+ok: [marutamachi] => {
+    "csv_values": {
+        "changed": false,
+        "dict": {},
+        "failed": false,
+        "list": [
+            {
+                "name": "taro",
+                "password": "password@taro"
+            },
+            {
+                "name": "jiro",
+                "password": "password@jiro"
+            },
+            {
+                "name": "hanako",
+                "password": "password@hanako"
+            }
+        ]
+    }
+}
+
+TASK [Display the loaded contents individually.] *******************************
+ok: [marutamachi] => (item={'name': 'taro', 'password': 'password@taro'}) => {
+    "msg": "taro -> password@taro"
+}
+ok: [marutamachi] => (item={'name': 'jiro', 'password': 'password@jiro'}) => {
+    "msg": "jiro -> password@jiro"
+}
+ok: [marutamachi] => (item={'name': 'hanako', 'password': 'password@hanako'}) => {
+    "msg": "hanako -> password@hanako"
+}
+
+TASK [register user] ***********************************************************
+changed: [marutamachi] => (item={'name': 'taro', 'password': 'password@taro'})
+changed: [marutamachi] => (item={'name': 'jiro', 'password': 'password@jiro'})
+changed: [marutamachi] => (item={'name': 'hanako', 'password': 'password@hanako'})
+
+PLAY RECAP *********************************************************************
+marutamachi                : ok=5    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
