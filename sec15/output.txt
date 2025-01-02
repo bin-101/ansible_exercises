@@ -1,0 +1,33 @@
+
+PLAY [Apache] ******************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [takeyamachi]
+ok: [nijyo]
+ok: [marutamachi]
+ok: [ebisugawa]
+ok: [oshikoji]
+ok: [oike]
+
+TASK [run false] ***************************************************************
+skipping: [marutamachi]
+fatal: [nijyo]: FAILED! => {"changed": true, "cmd": ["/bin/false"], "delta": "0:00:00.001868", "end": "2025-01-03 01:03:16.637590", "msg": "non-zero return code", "rc": 1, "start": "2025-01-03 01:03:16.635722", "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+fatal: [takeyamachi]: FAILED! => {"changed": true, "cmd": ["/bin/false"], "delta": "0:00:00.001951", "end": "2025-01-03 01:03:16.647930", "msg": "non-zero return code", "rc": 1, "start": "2025-01-03 01:03:16.645979", "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+fatal: [oshikoji]: FAILED! => {"changed": true, "cmd": ["/bin/false"], "delta": "0:00:00.001966", "end": "2025-01-03 01:03:16.656812", "msg": "non-zero return code", "rc": 1, "start": "2025-01-03 01:03:16.654846", "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+fatal: [ebisugawa]: FAILED! => {"changed": true, "cmd": ["/bin/false"], "delta": "0:00:00.001958", "end": "2025-01-03 01:03:16.679310", "msg": "non-zero return code", "rc": 1, "start": "2025-01-03 01:03:16.677352", "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+fatal: [oike]: FAILED! => {"changed": true, "cmd": ["/bin/false"], "delta": "0:00:00.002312", "end": "2025-01-03 01:03:16.664436", "msg": "non-zero return code", "rc": 1, "start": "2025-01-03 01:03:16.662124", "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+
+TASK [install apache2] *********************************************************
+ok: [marutamachi]
+
+TASK [Start apache2 service.] **************************************************
+ok: [marutamachi]
+
+PLAY RECAP *********************************************************************
+ebisugawa                  : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+marutamachi                : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+nijyo                      : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+oike                       : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+oshikoji                   : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+takeyamachi                : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+

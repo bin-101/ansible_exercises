@@ -1,0 +1,21 @@
+---
+- name: Apache # 192.168.111.101:80にアクセスしてapache2が表示されることを確認
+  hosts: all
+
+  tasks:
+    - name: run false
+      ansible.builtin.command: /bin/false
+      when: inventory_hostname != "marutamachi"
+    - name: install apache2
+      ansible.builtin.apt:
+        name: apache2
+        state: present
+        update_cache: yes
+      when: ansible_facts['os_family'] == "Debian"
+      become: yes
+    - name: Start apache2 service.
+      ansible.builtin.systemd:
+        name: apache2.service
+        state: started
+      become: yes
+
