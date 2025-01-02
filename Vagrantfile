@@ -15,33 +15,33 @@ Vagrant.configure("2") do |config|
     end
   
   #
-  # CentOS 8 / marutamachi
+  # Debian 10 / marutamachi
   #
     config.vm.define :marutamachi do |marutamachi|
-      marutamachi.vm.box = "centos/8"
+      marutamachi.vm.box = "debian/buster64"
       marutamachi.vm.network "private_network", mac: "00006c000101", ip: "192.168.111.101", virtualbox__intnet: true
       marutamachi.vm.hostname = "marutamachi.example.jp"
       marutamachi.vm.provider "virtualbox" do |vb|
         vb.name = "marutamachi"
       end
-      marutamachi.vm.provision "shell", inline: $remove_vmtools
       marutamachi.vm.provision "shell", inline: $common_provisioning
-      marutamachi.vm.provision "shell", inline: $centos8_provisioning
+      marutamachi.vm.provision "shell", inline: $set_vagrant_password
+      marutamachi.vm.provision "shell", inline: $debian_provisioning
     end
   
   #
-  # CentOS 7 / takeyamachi
+  # Debian 10 / takeyamachi
   #
     config.vm.define :takeyamachi do |takeyamachi|
-      takeyamachi.vm.box = "centos/7"
+      takeyamachi.vm.box = "debian/buster64"
       takeyamachi.vm.network "private_network", mac: "00006c000102", ip: "192.168.111.102", virtualbox__intnet: true
       takeyamachi.vm.hostname = "takeyamachi.example.jp"
       takeyamachi.vm.provider "virtualbox" do |vb|
         vb.name = "takeyamachi"
       end
-      takeyamachi.vm.provision "shell", inline: $remove_vmtools_yum
       takeyamachi.vm.provision "shell", inline: $common_provisioning
-      takeyamachi.vm.provision "shell", inline: $centos7_provisioning
+      takeyamachi.vm.provision "shell", inline: $set_vagrant_password
+      takeyamachi.vm.provision "shell", inline: $debian_provisioning
     end
   
   #
@@ -90,17 +90,18 @@ Vagrant.configure("2") do |config|
     end
   
   #
-  # AlmaLinux 8 / oike
+  # Debian 10 / oike
   #
     config.vm.define :oike do |oike|
-      oike.vm.box = "almalinux/8"
+      oike.vm.box = "debian/buster64"
       oike.vm.network "private_network", mac: "00006c000106", ip: "192.168.111.106", virtualbox__intnet: true
       oike.vm.hostname = "oike.example.jp"
       oike.vm.provider "virtualbox" do |vb|
         vb.name = "oike"
       end
       oike.vm.provision "shell", inline: $common_provisioning
-      oike.vm.provision "shell", inline: $centos8_provisioning
+      oike.vm.provision "shell", inline: $set_vagrant_password
+      oike.vm.provision "shell", inline: $debian_provisioning
     end
   
   end
