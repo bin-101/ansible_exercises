@@ -1,0 +1,23 @@
+
+PLAY [Install Webmin] **********************************************************
+
+TASK [Install required packages] ***********************************************
+ok: [marutamachi] => (item=apt-transport-https)
+ok: [marutamachi] => (item=gnupg2)
+ok: [marutamachi] => (item=perl)
+
+TASK [Add Webmin GPG key] ******************************************************
+ok: [marutamachi]
+
+TASK [Add Webmin repository] ***************************************************
+ok: [marutamachi]
+
+TASK [Update apt cache] ********************************************************
+ok: [marutamachi]
+
+TASK [Install Webmin] **********************************************************
+ok: [marutamachi]
+
+PLAY RECAP *********************************************************************
+marutamachi                : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+

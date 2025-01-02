@@ -1,0 +1,35 @@
+---
+- name: Install Webmin
+  hosts: all
+  gather_facts: no
+  become: yes
+
+  tasks:
+    - name: Install required packages
+      ansible.builtin.apt:
+        name: # シーケンス形式で渡せば複数のパッケージを指定できる。
+          - apt-transport-https
+          - gnupg2
+          - perl
+        state: present
+        update_cache: yes # apt update相当
+
+    - name: Add Webmin GPG key
+      ansible.builtin.apt_key:
+        url: http://www.webmin.com/jcameron-key.asc
+        state: present
+
+    - name: Add Webmin repository
+      ansible.builtin.apt_repository:
+        repo: deb http://download.webmin.com/download/repository sarge contrib
+        filename: webmin
+        state: present
+
+    - name: Update apt cache
+      ansible.builtin.apt:
+        update_cache: yes
+
+    - name: Install Webmin
+      ansible.builtin.apt:
+        name: webmin
+        state: present
