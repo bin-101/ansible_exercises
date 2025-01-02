@@ -1,0 +1,32 @@
+鍵について、書かれている通りに実行
+```
+bin101@bin101-Inspiron-16-5635:~/code/ansible_exercises/sec5$ ssh-keygen -t ed25519 -P "" -C ""
+bin101@bin101-Inspiron-16-5635:~/code/ansible_exercises/sec5$ ssh-copy-id -i ~/.ssh/id_ed25519.pub vagrant@192.168.111.101
+bin101@bin101-Inspiron-16-5635:~/code/ansible_exercises/sec5$ ssh vagrant@192.168.111.101
+Last login: Thu Jan  2 02:51:27 2025 from 192.168.111.1
+[vagrant@marutamachi ~]$ # パスワードなしでログインに成功
+# 他の仮想マシンにも実行
+```
+
+---
+all:
+  vars:
+    ansible_user: vagrant
+    ansible_ssh_private_key_file: ~/.ssh/id_ed25519
+  hosts:
+    marutamachi:
+      ansible_host: 192.168.111.101
+    takeyamachi:
+      ansible_host: 192.168.111.102
+    ebisugawa:
+      ansible_host: 192.168.111.103
+      ansible_python_interpreter: /usr/bin/python3
+    nijyo:
+      ansible_host: 192.168.111.104
+      ansible_python_interpreter: /usr/bin/python3
+    oshikoji:
+      ansible_host: 192.168.111.105
+      ansible_python_interpreter: /usr/bin/python3
+    oike:
+      ansible_host: 192.168.111.106
+      ansible_python_interpreter: /usr/libexec/platform-python

@@ -1,0 +1,31 @@
+---
+all:
+  hosts:
+    marutamachi:
+      ansible_host: 192.168.111.101
+      ansible_user: vagrant
+      ansible_password: vagrant
+    takeyamachi:
+      ansible_host: 192.168.111.102
+      ansible_user: vagrant
+      ansible_password: vagrant
+    ebisugawa:
+      ansible_host: 192.168.111.103
+      ansible_user: vagrant
+      ansible_password: vagrant
+      ansible_python_interpreter: /usr/bin/python3
+    nijyo:
+      ansible_host: 192.168.111.104
+      ansible_user: vagrant
+      ansible_password: vagrant
+      ansible_python_interpreter: /usr/bin/python3
+    oshikoji:
+      ansible_host: 192.168.111.105
+      ansible_user: vagrant
+      ansible_password: vagrant
+      ansible_python_interpreter: /usr/bin/python3
+    oike:
+      ansible_host: 192.168.111.106
+      ansible_user: vagrant
+      ansible_password: vagrant
+      ansible_python_interpreter: /usr/libexec/platform-python
