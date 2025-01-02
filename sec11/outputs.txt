@@ -1,0 +1,2275 @@
+
+PLAY [Check the value of the Magic variable.] **********************************
+
+TASK [Displays the value of inventor_hostname.] ********************************
+ok: [ebisugawa] => {
+    "inventory_hostname": "ebisugawa"
+}
+ok: [nijyo] => {
+    "inventory_hostname": "nijyo"
+}
+ok: [oshikoji] => {
+    "inventory_hostname": "oshikoji"
+}
+ok: [oike] => {
+    "inventory_hostname": "oike"
+}
+ok: [marutamachi] => {
+    "inventory_hostname": "marutamachi"
+}
+ok: [takeyamachi] => {
+    "inventory_hostname": "takeyamachi"
+}
+
+TASK [Displays the value of group_names] ***************************************
+ok: [ebisugawa] => {
+    "group_names": [
+        "ungrouped"
+    ]
+}
+ok: [nijyo] => {
+    "group_names": [
+        "ungrouped"
+    ]
+}
+ok: [oshikoji] => {
+    "group_names": [
+        "ungrouped"
+    ]
+}
+ok: [oike] => {
+    "group_names": [
+        "ungrouped"
+    ]
+}
+ok: [marutamachi] => {
+    "group_names": [
+        "db"
+    ]
+}
+ok: [takeyamachi] => {
+    "group_names": [
+        "db"
+    ]
+}
+
+TASK [Displays the value of groups] ********************************************
+ok: [ebisugawa] => {
+    "groups": {
+        "all": [
+            "ebisugawa",
+            "nijyo",
+            "oshikoji",
+            "oike",
+            "marutamachi",
+            "takeyamachi"
+        ],
+        "db": [
+            "marutamachi",
+            "takeyamachi"
+        ],
+        "ungrouped": [
+            "ebisugawa",
+            "nijyo",
+            "oshikoji",
+            "oike"
+        ]
+    }
+}
+ok: [nijyo] => {
+    "groups": {
+        "all": [
+            "ebisugawa",
+            "nijyo",
+            "oshikoji",
+            "oike",
+            "marutamachi",
+            "takeyamachi"
+        ],
+        "db": [
+            "marutamachi",
+            "takeyamachi"
+        ],
+        "ungrouped": [
+            "ebisugawa",
+            "nijyo",
+            "oshikoji",
+            "oike"
+        ]
+    }
+}
+ok: [oshikoji] => {
+    "groups": {
+        "all": [
+            "ebisugawa",
+            "nijyo",
+            "oshikoji",
+            "oike",
+            "marutamachi",
+            "takeyamachi"
+        ],
+        "db": [
+            "marutamachi",
+            "takeyamachi"
+        ],
+        "ungrouped": [
+            "ebisugawa",
+            "nijyo",
+            "oshikoji",
+            "oike"
+        ]
+    }
+}
+ok: [oike] => {
+    "groups": {
+        "all": [
+            "ebisugawa",
+            "nijyo",
+            "oshikoji",
+            "oike",
+            "marutamachi",
+            "takeyamachi"
+        ],
+        "db": [
+            "marutamachi",
+            "takeyamachi"
+        ],
+        "ungrouped": [
+            "ebisugawa",
+            "nijyo",
+            "oshikoji",
+            "oike"
+        ]
+    }
+}
+ok: [marutamachi] => {
+    "groups": {
+        "all": [
+            "ebisugawa",
+            "nijyo",
+            "oshikoji",
+            "oike",
+            "marutamachi",
+            "takeyamachi"
+        ],
+        "db": [
+            "marutamachi",
+            "takeyamachi"
+        ],
+        "ungrouped": [
+            "ebisugawa",
+            "nijyo",
+            "oshikoji",
+            "oike"
+        ]
+    }
+}
+ok: [takeyamachi] => {
+    "groups": {
+        "all": [
+            "ebisugawa",
+            "nijyo",
+            "oshikoji",
+            "oike",
+            "marutamachi",
+            "takeyamachi"
+        ],
+        "db": [
+            "marutamachi",
+            "takeyamachi"
+        ],
+        "ungrouped": [
+            "ebisugawa",
+            "nijyo",
+            "oshikoji",
+            "oike"
+        ]
+    }
+}
+
+TASK [Displays the value of hostvars] ******************************************
+ok: [ebisugawa] => {
+    "hostvars": {
+        "ebisugawa": {
+            "ansible_check_mode": false,
+            "ansible_config_file": null,
+            "ansible_diff_mode": false,
+            "ansible_facts": {},
+            "ansible_forks": 5,
+            "ansible_host": "192.168.111.103",
+            "ansible_inventory_sources": [
+                "/home/bin101/code/ansible_exercises/sec8/hosts.yml"
+            ],
+            "ansible_playbook_python": "/home/bin101/code/ansible_exercises/ansible_exercises/bin/python3",
+            "ansible_python_interpreter": "/usr/bin/python3",
+            "ansible_run_tags": [
+                "all"
+            ],
+            "ansible_skip_tags": [],
+            "ansible_ssh_private_key_file": "~/.ssh/id_ed25519",
+            "ansible_user": "vagrant",
+            "ansible_verbosity": 0,
+            "ansible_version": {
+                "full": "2.17.7",
+                "major": 2,
+                "minor": 17,
+                "revision": 7,
+                "string": "2.17.7"
+            },
+            "group_names": [
+                "ungrouped"
+            ],
+            "groups": {
+                "all": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike",
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "db": [
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "ungrouped": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike"
+                ]
+            },
+            "inventory_dir": "/home/bin101/code/ansible_exercises/sec8",
+            "inventory_file": "/home/bin101/code/ansible_exercises/sec8/hosts.yml",
+            "inventory_hostname": "ebisugawa",
+            "inventory_hostname_short": "ebisugawa",
+            "omit": "__omit_place_holder__e1cc1e2b0671182f374338d7d4194380d53eab97",
+            "playbook_dir": "/home/bin101/code/ansible_exercises/sec11"
+        },
+        "marutamachi": {
+            "ansible_check_mode": false,
+            "ansible_config_file": null,
+            "ansible_diff_mode": false,
+            "ansible_facts": {},
+            "ansible_forks": 5,
+            "ansible_host": "192.168.111.101",
+            "ansible_inventory_sources": [
+                "/home/bin101/code/ansible_exercises/sec8/hosts.yml"
+            ],
+            "ansible_playbook_python": "/home/bin101/code/ansible_exercises/ansible_exercises/bin/python3",
+            "ansible_python_interpreter": "/usr/bin/python3",
+            "ansible_run_tags": [
+                "all"
+            ],
+            "ansible_skip_tags": [],
+            "ansible_ssh_private_key_file": "~/.ssh/id_ed25519",
+            "ansible_user": "vagrant",
+            "ansible_verbosity": 0,
+            "ansible_version": {
+                "full": "2.17.7",
+                "major": 2,
+                "minor": 17,
+                "revision": 7,
+                "string": "2.17.7"
+            },
+            "db_password": "tiger",
+            "db_port": 1521,
+            "db_user": "scott",
+            "group_names": [
+                "db"
+            ],
+            "groups": {
+                "all": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike",
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "db": [
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "ungrouped": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike"
+                ]
+            },
+            "inventory_dir": "/home/bin101/code/ansible_exercises/sec8",
+            "inventory_file": "/home/bin101/code/ansible_exercises/sec8/hosts.yml",
+            "inventory_hostname": "marutamachi",
+            "inventory_hostname_short": "marutamachi",
+            "omit": "__omit_place_holder__e1cc1e2b0671182f374338d7d4194380d53eab97",
+            "playbook_dir": "/home/bin101/code/ansible_exercises/sec11"
+        },
+        "nijyo": {
+            "ansible_check_mode": false,
+            "ansible_config_file": null,
+            "ansible_diff_mode": false,
+            "ansible_facts": {},
+            "ansible_forks": 5,
+            "ansible_host": "192.168.111.104",
+            "ansible_inventory_sources": [
+                "/home/bin101/code/ansible_exercises/sec8/hosts.yml"
+            ],
+            "ansible_playbook_python": "/home/bin101/code/ansible_exercises/ansible_exercises/bin/python3",
+            "ansible_python_interpreter": "/usr/bin/python3",
+            "ansible_run_tags": [
+                "all"
+            ],
+            "ansible_skip_tags": [],
+            "ansible_ssh_private_key_file": "~/.ssh/id_ed25519",
+            "ansible_user": "vagrant",
+            "ansible_verbosity": 0,
+            "ansible_version": {
+                "full": "2.17.7",
+                "major": 2,
+                "minor": 17,
+                "revision": 7,
+                "string": "2.17.7"
+            },
+            "group_names": [
+                "ungrouped"
+            ],
+            "groups": {
+                "all": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike",
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "db": [
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "ungrouped": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike"
+                ]
+            },
+            "inventory_dir": "/home/bin101/code/ansible_exercises/sec8",
+            "inventory_file": "/home/bin101/code/ansible_exercises/sec8/hosts.yml",
+            "inventory_hostname": "nijyo",
+            "inventory_hostname_short": "nijyo",
+            "omit": "__omit_place_holder__e1cc1e2b0671182f374338d7d4194380d53eab97",
+            "playbook_dir": "/home/bin101/code/ansible_exercises/sec11"
+        },
+        "oike": {
+            "ansible_check_mode": false,
+            "ansible_config_file": null,
+            "ansible_diff_mode": false,
+            "ansible_facts": {},
+            "ansible_forks": 5,
+            "ansible_host": "192.168.111.106",
+            "ansible_inventory_sources": [
+                "/home/bin101/code/ansible_exercises/sec8/hosts.yml"
+            ],
+            "ansible_playbook_python": "/home/bin101/code/ansible_exercises/ansible_exercises/bin/python3",
+            "ansible_python_interpreter": "/usr/bin/python3",
+            "ansible_run_tags": [
+                "all"
+            ],
+            "ansible_skip_tags": [],
+            "ansible_ssh_private_key_file": "~/.ssh/id_ed25519",
+            "ansible_user": "vagrant",
+            "ansible_verbosity": 0,
+            "ansible_version": {
+                "full": "2.17.7",
+                "major": 2,
+                "minor": 17,
+                "revision": 7,
+                "string": "2.17.7"
+            },
+            "group_names": [
+                "ungrouped"
+            ],
+            "groups": {
+                "all": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike",
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "db": [
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "ungrouped": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike"
+                ]
+            },
+            "inventory_dir": "/home/bin101/code/ansible_exercises/sec8",
+            "inventory_file": "/home/bin101/code/ansible_exercises/sec8/hosts.yml",
+            "inventory_hostname": "oike",
+            "inventory_hostname_short": "oike",
+            "omit": "__omit_place_holder__e1cc1e2b0671182f374338d7d4194380d53eab97",
+            "playbook_dir": "/home/bin101/code/ansible_exercises/sec11"
+        },
+        "oshikoji": {
+            "ansible_check_mode": false,
+            "ansible_config_file": null,
+            "ansible_diff_mode": false,
+            "ansible_facts": {},
+            "ansible_forks": 5,
+            "ansible_host": "192.168.111.105",
+            "ansible_inventory_sources": [
+                "/home/bin101/code/ansible_exercises/sec8/hosts.yml"
+            ],
+            "ansible_playbook_python": "/home/bin101/code/ansible_exercises/ansible_exercises/bin/python3",
+            "ansible_python_interpreter": "/usr/bin/python3",
+            "ansible_run_tags": [
+                "all"
+            ],
+            "ansible_skip_tags": [],
+            "ansible_ssh_private_key_file": "~/.ssh/id_ed25519",
+            "ansible_user": "vagrant",
+            "ansible_verbosity": 0,
+            "ansible_version": {
+                "full": "2.17.7",
+                "major": 2,
+                "minor": 17,
+                "revision": 7,
+                "string": "2.17.7"
+            },
+            "group_names": [
+                "ungrouped"
+            ],
+            "groups": {
+                "all": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike",
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "db": [
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "ungrouped": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike"
+                ]
+            },
+            "inventory_dir": "/home/bin101/code/ansible_exercises/sec8",
+            "inventory_file": "/home/bin101/code/ansible_exercises/sec8/hosts.yml",
+            "inventory_hostname": "oshikoji",
+            "inventory_hostname_short": "oshikoji",
+            "omit": "__omit_place_holder__e1cc1e2b0671182f374338d7d4194380d53eab97",
+            "playbook_dir": "/home/bin101/code/ansible_exercises/sec11"
+        },
+        "takeyamachi": {
+            "ansible_check_mode": false,
+            "ansible_config_file": null,
+            "ansible_diff_mode": false,
+            "ansible_facts": {},
+            "ansible_forks": 5,
+            "ansible_host": "192.168.111.102",
+            "ansible_inventory_sources": [
+                "/home/bin101/code/ansible_exercises/sec8/hosts.yml"
+            ],
+            "ansible_playbook_python": "/home/bin101/code/ansible_exercises/ansible_exercises/bin/python3",
+            "ansible_python_interpreter": "/usr/bin/python3",
+            "ansible_run_tags": [
+                "all"
+            ],
+            "ansible_skip_tags": [],
+            "ansible_ssh_private_key_file": "~/.ssh/id_ed25519",
+            "ansible_user": "vagrant",
+            "ansible_verbosity": 0,
+            "ansible_version": {
+                "full": "2.17.7",
+                "major": 2,
+                "minor": 17,
+                "revision": 7,
+                "string": "2.17.7"
+            },
+            "db_password": "tiger",
+            "db_port": 1521,
+            "db_user": "scott",
+            "group_names": [
+                "db"
+            ],
+            "groups": {
+                "all": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike",
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "db": [
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "ungrouped": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike"
+                ]
+            },
+            "inventory_dir": "/home/bin101/code/ansible_exercises/sec8",
+            "inventory_file": "/home/bin101/code/ansible_exercises/sec8/hosts.yml",
+            "inventory_hostname": "takeyamachi",
+            "inventory_hostname_short": "takeyamachi",
+            "omit": "__omit_place_holder__e1cc1e2b0671182f374338d7d4194380d53eab97",
+            "playbook_dir": "/home/bin101/code/ansible_exercises/sec11"
+        }
+    }
+}
+ok: [nijyo] => {
+    "hostvars": {
+        "ebisugawa": {
+            "ansible_check_mode": false,
+            "ansible_config_file": null,
+            "ansible_diff_mode": false,
+            "ansible_facts": {},
+            "ansible_forks": 5,
+            "ansible_host": "192.168.111.103",
+            "ansible_inventory_sources": [
+                "/home/bin101/code/ansible_exercises/sec8/hosts.yml"
+            ],
+            "ansible_playbook_python": "/home/bin101/code/ansible_exercises/ansible_exercises/bin/python3",
+            "ansible_python_interpreter": "/usr/bin/python3",
+            "ansible_run_tags": [
+                "all"
+            ],
+            "ansible_skip_tags": [],
+            "ansible_ssh_private_key_file": "~/.ssh/id_ed25519",
+            "ansible_user": "vagrant",
+            "ansible_verbosity": 0,
+            "ansible_version": {
+                "full": "2.17.7",
+                "major": 2,
+                "minor": 17,
+                "revision": 7,
+                "string": "2.17.7"
+            },
+            "group_names": [
+                "ungrouped"
+            ],
+            "groups": {
+                "all": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike",
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "db": [
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "ungrouped": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike"
+                ]
+            },
+            "inventory_dir": "/home/bin101/code/ansible_exercises/sec8",
+            "inventory_file": "/home/bin101/code/ansible_exercises/sec8/hosts.yml",
+            "inventory_hostname": "ebisugawa",
+            "inventory_hostname_short": "ebisugawa",
+            "omit": "__omit_place_holder__e1cc1e2b0671182f374338d7d4194380d53eab97",
+            "playbook_dir": "/home/bin101/code/ansible_exercises/sec11"
+        },
+        "marutamachi": {
+            "ansible_check_mode": false,
+            "ansible_config_file": null,
+            "ansible_diff_mode": false,
+            "ansible_facts": {},
+            "ansible_forks": 5,
+            "ansible_host": "192.168.111.101",
+            "ansible_inventory_sources": [
+                "/home/bin101/code/ansible_exercises/sec8/hosts.yml"
+            ],
+            "ansible_playbook_python": "/home/bin101/code/ansible_exercises/ansible_exercises/bin/python3",
+            "ansible_python_interpreter": "/usr/bin/python3",
+            "ansible_run_tags": [
+                "all"
+            ],
+            "ansible_skip_tags": [],
+            "ansible_ssh_private_key_file": "~/.ssh/id_ed25519",
+            "ansible_user": "vagrant",
+            "ansible_verbosity": 0,
+            "ansible_version": {
+                "full": "2.17.7",
+                "major": 2,
+                "minor": 17,
+                "revision": 7,
+                "string": "2.17.7"
+            },
+            "db_password": "tiger",
+            "db_port": 1521,
+            "db_user": "scott",
+            "group_names": [
+                "db"
+            ],
+            "groups": {
+                "all": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike",
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "db": [
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "ungrouped": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike"
+                ]
+            },
+            "inventory_dir": "/home/bin101/code/ansible_exercises/sec8",
+            "inventory_file": "/home/bin101/code/ansible_exercises/sec8/hosts.yml",
+            "inventory_hostname": "marutamachi",
+            "inventory_hostname_short": "marutamachi",
+            "omit": "__omit_place_holder__e1cc1e2b0671182f374338d7d4194380d53eab97",
+            "playbook_dir": "/home/bin101/code/ansible_exercises/sec11"
+        },
+        "nijyo": {
+            "ansible_check_mode": false,
+            "ansible_config_file": null,
+            "ansible_diff_mode": false,
+            "ansible_facts": {},
+            "ansible_forks": 5,
+            "ansible_host": "192.168.111.104",
+            "ansible_inventory_sources": [
+                "/home/bin101/code/ansible_exercises/sec8/hosts.yml"
+            ],
+            "ansible_playbook_python": "/home/bin101/code/ansible_exercises/ansible_exercises/bin/python3",
+            "ansible_python_interpreter": "/usr/bin/python3",
+            "ansible_run_tags": [
+                "all"
+            ],
+            "ansible_skip_tags": [],
+            "ansible_ssh_private_key_file": "~/.ssh/id_ed25519",
+            "ansible_user": "vagrant",
+            "ansible_verbosity": 0,
+            "ansible_version": {
+                "full": "2.17.7",
+                "major": 2,
+                "minor": 17,
+                "revision": 7,
+                "string": "2.17.7"
+            },
+            "group_names": [
+                "ungrouped"
+            ],
+            "groups": {
+                "all": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike",
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "db": [
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "ungrouped": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike"
+                ]
+            },
+            "inventory_dir": "/home/bin101/code/ansible_exercises/sec8",
+            "inventory_file": "/home/bin101/code/ansible_exercises/sec8/hosts.yml",
+            "inventory_hostname": "nijyo",
+            "inventory_hostname_short": "nijyo",
+            "omit": "__omit_place_holder__e1cc1e2b0671182f374338d7d4194380d53eab97",
+            "playbook_dir": "/home/bin101/code/ansible_exercises/sec11"
+        },
+        "oike": {
+            "ansible_check_mode": false,
+            "ansible_config_file": null,
+            "ansible_diff_mode": false,
+            "ansible_facts": {},
+            "ansible_forks": 5,
+            "ansible_host": "192.168.111.106",
+            "ansible_inventory_sources": [
+                "/home/bin101/code/ansible_exercises/sec8/hosts.yml"
+            ],
+            "ansible_playbook_python": "/home/bin101/code/ansible_exercises/ansible_exercises/bin/python3",
+            "ansible_python_interpreter": "/usr/bin/python3",
+            "ansible_run_tags": [
+                "all"
+            ],
+            "ansible_skip_tags": [],
+            "ansible_ssh_private_key_file": "~/.ssh/id_ed25519",
+            "ansible_user": "vagrant",
+            "ansible_verbosity": 0,
+            "ansible_version": {
+                "full": "2.17.7",
+                "major": 2,
+                "minor": 17,
+                "revision": 7,
+                "string": "2.17.7"
+            },
+            "group_names": [
+                "ungrouped"
+            ],
+            "groups": {
+                "all": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike",
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "db": [
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "ungrouped": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike"
+                ]
+            },
+            "inventory_dir": "/home/bin101/code/ansible_exercises/sec8",
+            "inventory_file": "/home/bin101/code/ansible_exercises/sec8/hosts.yml",
+            "inventory_hostname": "oike",
+            "inventory_hostname_short": "oike",
+            "omit": "__omit_place_holder__e1cc1e2b0671182f374338d7d4194380d53eab97",
+            "playbook_dir": "/home/bin101/code/ansible_exercises/sec11"
+        },
+        "oshikoji": {
+            "ansible_check_mode": false,
+            "ansible_config_file": null,
+            "ansible_diff_mode": false,
+            "ansible_facts": {},
+            "ansible_forks": 5,
+            "ansible_host": "192.168.111.105",
+            "ansible_inventory_sources": [
+                "/home/bin101/code/ansible_exercises/sec8/hosts.yml"
+            ],
+            "ansible_playbook_python": "/home/bin101/code/ansible_exercises/ansible_exercises/bin/python3",
+            "ansible_python_interpreter": "/usr/bin/python3",
+            "ansible_run_tags": [
+                "all"
+            ],
+            "ansible_skip_tags": [],
+            "ansible_ssh_private_key_file": "~/.ssh/id_ed25519",
+            "ansible_user": "vagrant",
+            "ansible_verbosity": 0,
+            "ansible_version": {
+                "full": "2.17.7",
+                "major": 2,
+                "minor": 17,
+                "revision": 7,
+                "string": "2.17.7"
+            },
+            "group_names": [
+                "ungrouped"
+            ],
+            "groups": {
+                "all": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike",
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "db": [
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "ungrouped": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike"
+                ]
+            },
+            "inventory_dir": "/home/bin101/code/ansible_exercises/sec8",
+            "inventory_file": "/home/bin101/code/ansible_exercises/sec8/hosts.yml",
+            "inventory_hostname": "oshikoji",
+            "inventory_hostname_short": "oshikoji",
+            "omit": "__omit_place_holder__e1cc1e2b0671182f374338d7d4194380d53eab97",
+            "playbook_dir": "/home/bin101/code/ansible_exercises/sec11"
+        },
+        "takeyamachi": {
+            "ansible_check_mode": false,
+            "ansible_config_file": null,
+            "ansible_diff_mode": false,
+            "ansible_facts": {},
+            "ansible_forks": 5,
+            "ansible_host": "192.168.111.102",
+            "ansible_inventory_sources": [
+                "/home/bin101/code/ansible_exercises/sec8/hosts.yml"
+            ],
+            "ansible_playbook_python": "/home/bin101/code/ansible_exercises/ansible_exercises/bin/python3",
+            "ansible_python_interpreter": "/usr/bin/python3",
+            "ansible_run_tags": [
+                "all"
+            ],
+            "ansible_skip_tags": [],
+            "ansible_ssh_private_key_file": "~/.ssh/id_ed25519",
+            "ansible_user": "vagrant",
+            "ansible_verbosity": 0,
+            "ansible_version": {
+                "full": "2.17.7",
+                "major": 2,
+                "minor": 17,
+                "revision": 7,
+                "string": "2.17.7"
+            },
+            "db_password": "tiger",
+            "db_port": 1521,
+            "db_user": "scott",
+            "group_names": [
+                "db"
+            ],
+            "groups": {
+                "all": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike",
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "db": [
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "ungrouped": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike"
+                ]
+            },
+            "inventory_dir": "/home/bin101/code/ansible_exercises/sec8",
+            "inventory_file": "/home/bin101/code/ansible_exercises/sec8/hosts.yml",
+            "inventory_hostname": "takeyamachi",
+            "inventory_hostname_short": "takeyamachi",
+            "omit": "__omit_place_holder__e1cc1e2b0671182f374338d7d4194380d53eab97",
+            "playbook_dir": "/home/bin101/code/ansible_exercises/sec11"
+        }
+    }
+}
+ok: [oshikoji] => {
+    "hostvars": {
+        "ebisugawa": {
+            "ansible_check_mode": false,
+            "ansible_config_file": null,
+            "ansible_diff_mode": false,
+            "ansible_facts": {},
+            "ansible_forks": 5,
+            "ansible_host": "192.168.111.103",
+            "ansible_inventory_sources": [
+                "/home/bin101/code/ansible_exercises/sec8/hosts.yml"
+            ],
+            "ansible_playbook_python": "/home/bin101/code/ansible_exercises/ansible_exercises/bin/python3",
+            "ansible_python_interpreter": "/usr/bin/python3",
+            "ansible_run_tags": [
+                "all"
+            ],
+            "ansible_skip_tags": [],
+            "ansible_ssh_private_key_file": "~/.ssh/id_ed25519",
+            "ansible_user": "vagrant",
+            "ansible_verbosity": 0,
+            "ansible_version": {
+                "full": "2.17.7",
+                "major": 2,
+                "minor": 17,
+                "revision": 7,
+                "string": "2.17.7"
+            },
+            "group_names": [
+                "ungrouped"
+            ],
+            "groups": {
+                "all": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike",
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "db": [
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "ungrouped": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike"
+                ]
+            },
+            "inventory_dir": "/home/bin101/code/ansible_exercises/sec8",
+            "inventory_file": "/home/bin101/code/ansible_exercises/sec8/hosts.yml",
+            "inventory_hostname": "ebisugawa",
+            "inventory_hostname_short": "ebisugawa",
+            "omit": "__omit_place_holder__e1cc1e2b0671182f374338d7d4194380d53eab97",
+            "playbook_dir": "/home/bin101/code/ansible_exercises/sec11"
+        },
+        "marutamachi": {
+            "ansible_check_mode": false,
+            "ansible_config_file": null,
+            "ansible_diff_mode": false,
+            "ansible_facts": {},
+            "ansible_forks": 5,
+            "ansible_host": "192.168.111.101",
+            "ansible_inventory_sources": [
+                "/home/bin101/code/ansible_exercises/sec8/hosts.yml"
+            ],
+            "ansible_playbook_python": "/home/bin101/code/ansible_exercises/ansible_exercises/bin/python3",
+            "ansible_python_interpreter": "/usr/bin/python3",
+            "ansible_run_tags": [
+                "all"
+            ],
+            "ansible_skip_tags": [],
+            "ansible_ssh_private_key_file": "~/.ssh/id_ed25519",
+            "ansible_user": "vagrant",
+            "ansible_verbosity": 0,
+            "ansible_version": {
+                "full": "2.17.7",
+                "major": 2,
+                "minor": 17,
+                "revision": 7,
+                "string": "2.17.7"
+            },
+            "db_password": "tiger",
+            "db_port": 1521,
+            "db_user": "scott",
+            "group_names": [
+                "db"
+            ],
+            "groups": {
+                "all": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike",
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "db": [
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "ungrouped": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike"
+                ]
+            },
+            "inventory_dir": "/home/bin101/code/ansible_exercises/sec8",
+            "inventory_file": "/home/bin101/code/ansible_exercises/sec8/hosts.yml",
+            "inventory_hostname": "marutamachi",
+            "inventory_hostname_short": "marutamachi",
+            "omit": "__omit_place_holder__e1cc1e2b0671182f374338d7d4194380d53eab97",
+            "playbook_dir": "/home/bin101/code/ansible_exercises/sec11"
+        },
+        "nijyo": {
+            "ansible_check_mode": false,
+            "ansible_config_file": null,
+            "ansible_diff_mode": false,
+            "ansible_facts": {},
+            "ansible_forks": 5,
+            "ansible_host": "192.168.111.104",
+            "ansible_inventory_sources": [
+                "/home/bin101/code/ansible_exercises/sec8/hosts.yml"
+            ],
+            "ansible_playbook_python": "/home/bin101/code/ansible_exercises/ansible_exercises/bin/python3",
+            "ansible_python_interpreter": "/usr/bin/python3",
+            "ansible_run_tags": [
+                "all"
+            ],
+            "ansible_skip_tags": [],
+            "ansible_ssh_private_key_file": "~/.ssh/id_ed25519",
+            "ansible_user": "vagrant",
+            "ansible_verbosity": 0,
+            "ansible_version": {
+                "full": "2.17.7",
+                "major": 2,
+                "minor": 17,
+                "revision": 7,
+                "string": "2.17.7"
+            },
+            "group_names": [
+                "ungrouped"
+            ],
+            "groups": {
+                "all": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike",
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "db": [
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "ungrouped": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike"
+                ]
+            },
+            "inventory_dir": "/home/bin101/code/ansible_exercises/sec8",
+            "inventory_file": "/home/bin101/code/ansible_exercises/sec8/hosts.yml",
+            "inventory_hostname": "nijyo",
+            "inventory_hostname_short": "nijyo",
+            "omit": "__omit_place_holder__e1cc1e2b0671182f374338d7d4194380d53eab97",
+            "playbook_dir": "/home/bin101/code/ansible_exercises/sec11"
+        },
+        "oike": {
+            "ansible_check_mode": false,
+            "ansible_config_file": null,
+            "ansible_diff_mode": false,
+            "ansible_facts": {},
+            "ansible_forks": 5,
+            "ansible_host": "192.168.111.106",
+            "ansible_inventory_sources": [
+                "/home/bin101/code/ansible_exercises/sec8/hosts.yml"
+            ],
+            "ansible_playbook_python": "/home/bin101/code/ansible_exercises/ansible_exercises/bin/python3",
+            "ansible_python_interpreter": "/usr/bin/python3",
+            "ansible_run_tags": [
+                "all"
+            ],
+            "ansible_skip_tags": [],
+            "ansible_ssh_private_key_file": "~/.ssh/id_ed25519",
+            "ansible_user": "vagrant",
+            "ansible_verbosity": 0,
+            "ansible_version": {
+                "full": "2.17.7",
+                "major": 2,
+                "minor": 17,
+                "revision": 7,
+                "string": "2.17.7"
+            },
+            "group_names": [
+                "ungrouped"
+            ],
+            "groups": {
+                "all": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike",
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "db": [
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "ungrouped": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike"
+                ]
+            },
+            "inventory_dir": "/home/bin101/code/ansible_exercises/sec8",
+            "inventory_file": "/home/bin101/code/ansible_exercises/sec8/hosts.yml",
+            "inventory_hostname": "oike",
+            "inventory_hostname_short": "oike",
+            "omit": "__omit_place_holder__e1cc1e2b0671182f374338d7d4194380d53eab97",
+            "playbook_dir": "/home/bin101/code/ansible_exercises/sec11"
+        },
+        "oshikoji": {
+            "ansible_check_mode": false,
+            "ansible_config_file": null,
+            "ansible_diff_mode": false,
+            "ansible_facts": {},
+            "ansible_forks": 5,
+            "ansible_host": "192.168.111.105",
+            "ansible_inventory_sources": [
+                "/home/bin101/code/ansible_exercises/sec8/hosts.yml"
+            ],
+            "ansible_playbook_python": "/home/bin101/code/ansible_exercises/ansible_exercises/bin/python3",
+            "ansible_python_interpreter": "/usr/bin/python3",
+            "ansible_run_tags": [
+                "all"
+            ],
+            "ansible_skip_tags": [],
+            "ansible_ssh_private_key_file": "~/.ssh/id_ed25519",
+            "ansible_user": "vagrant",
+            "ansible_verbosity": 0,
+            "ansible_version": {
+                "full": "2.17.7",
+                "major": 2,
+                "minor": 17,
+                "revision": 7,
+                "string": "2.17.7"
+            },
+            "group_names": [
+                "ungrouped"
+            ],
+            "groups": {
+                "all": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike",
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "db": [
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "ungrouped": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike"
+                ]
+            },
+            "inventory_dir": "/home/bin101/code/ansible_exercises/sec8",
+            "inventory_file": "/home/bin101/code/ansible_exercises/sec8/hosts.yml",
+            "inventory_hostname": "oshikoji",
+            "inventory_hostname_short": "oshikoji",
+            "omit": "__omit_place_holder__e1cc1e2b0671182f374338d7d4194380d53eab97",
+            "playbook_dir": "/home/bin101/code/ansible_exercises/sec11"
+        },
+        "takeyamachi": {
+            "ansible_check_mode": false,
+            "ansible_config_file": null,
+            "ansible_diff_mode": false,
+            "ansible_facts": {},
+            "ansible_forks": 5,
+            "ansible_host": "192.168.111.102",
+            "ansible_inventory_sources": [
+                "/home/bin101/code/ansible_exercises/sec8/hosts.yml"
+            ],
+            "ansible_playbook_python": "/home/bin101/code/ansible_exercises/ansible_exercises/bin/python3",
+            "ansible_python_interpreter": "/usr/bin/python3",
+            "ansible_run_tags": [
+                "all"
+            ],
+            "ansible_skip_tags": [],
+            "ansible_ssh_private_key_file": "~/.ssh/id_ed25519",
+            "ansible_user": "vagrant",
+            "ansible_verbosity": 0,
+            "ansible_version": {
+                "full": "2.17.7",
+                "major": 2,
+                "minor": 17,
+                "revision": 7,
+                "string": "2.17.7"
+            },
+            "db_password": "tiger",
+            "db_port": 1521,
+            "db_user": "scott",
+            "group_names": [
+                "db"
+            ],
+            "groups": {
+                "all": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike",
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "db": [
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "ungrouped": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike"
+                ]
+            },
+            "inventory_dir": "/home/bin101/code/ansible_exercises/sec8",
+            "inventory_file": "/home/bin101/code/ansible_exercises/sec8/hosts.yml",
+            "inventory_hostname": "takeyamachi",
+            "inventory_hostname_short": "takeyamachi",
+            "omit": "__omit_place_holder__e1cc1e2b0671182f374338d7d4194380d53eab97",
+            "playbook_dir": "/home/bin101/code/ansible_exercises/sec11"
+        }
+    }
+}
+ok: [oike] => {
+    "hostvars": {
+        "ebisugawa": {
+            "ansible_check_mode": false,
+            "ansible_config_file": null,
+            "ansible_diff_mode": false,
+            "ansible_facts": {},
+            "ansible_forks": 5,
+            "ansible_host": "192.168.111.103",
+            "ansible_inventory_sources": [
+                "/home/bin101/code/ansible_exercises/sec8/hosts.yml"
+            ],
+            "ansible_playbook_python": "/home/bin101/code/ansible_exercises/ansible_exercises/bin/python3",
+            "ansible_python_interpreter": "/usr/bin/python3",
+            "ansible_run_tags": [
+                "all"
+            ],
+            "ansible_skip_tags": [],
+            "ansible_ssh_private_key_file": "~/.ssh/id_ed25519",
+            "ansible_user": "vagrant",
+            "ansible_verbosity": 0,
+            "ansible_version": {
+                "full": "2.17.7",
+                "major": 2,
+                "minor": 17,
+                "revision": 7,
+                "string": "2.17.7"
+            },
+            "group_names": [
+                "ungrouped"
+            ],
+            "groups": {
+                "all": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike",
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "db": [
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "ungrouped": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike"
+                ]
+            },
+            "inventory_dir": "/home/bin101/code/ansible_exercises/sec8",
+            "inventory_file": "/home/bin101/code/ansible_exercises/sec8/hosts.yml",
+            "inventory_hostname": "ebisugawa",
+            "inventory_hostname_short": "ebisugawa",
+            "omit": "__omit_place_holder__e1cc1e2b0671182f374338d7d4194380d53eab97",
+            "playbook_dir": "/home/bin101/code/ansible_exercises/sec11"
+        },
+        "marutamachi": {
+            "ansible_check_mode": false,
+            "ansible_config_file": null,
+            "ansible_diff_mode": false,
+            "ansible_facts": {},
+            "ansible_forks": 5,
+            "ansible_host": "192.168.111.101",
+            "ansible_inventory_sources": [
+                "/home/bin101/code/ansible_exercises/sec8/hosts.yml"
+            ],
+            "ansible_playbook_python": "/home/bin101/code/ansible_exercises/ansible_exercises/bin/python3",
+            "ansible_python_interpreter": "/usr/bin/python3",
+            "ansible_run_tags": [
+                "all"
+            ],
+            "ansible_skip_tags": [],
+            "ansible_ssh_private_key_file": "~/.ssh/id_ed25519",
+            "ansible_user": "vagrant",
+            "ansible_verbosity": 0,
+            "ansible_version": {
+                "full": "2.17.7",
+                "major": 2,
+                "minor": 17,
+                "revision": 7,
+                "string": "2.17.7"
+            },
+            "db_password": "tiger",
+            "db_port": 1521,
+            "db_user": "scott",
+            "group_names": [
+                "db"
+            ],
+            "groups": {
+                "all": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike",
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "db": [
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "ungrouped": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike"
+                ]
+            },
+            "inventory_dir": "/home/bin101/code/ansible_exercises/sec8",
+            "inventory_file": "/home/bin101/code/ansible_exercises/sec8/hosts.yml",
+            "inventory_hostname": "marutamachi",
+            "inventory_hostname_short": "marutamachi",
+            "omit": "__omit_place_holder__e1cc1e2b0671182f374338d7d4194380d53eab97",
+            "playbook_dir": "/home/bin101/code/ansible_exercises/sec11"
+        },
+        "nijyo": {
+            "ansible_check_mode": false,
+            "ansible_config_file": null,
+            "ansible_diff_mode": false,
+            "ansible_facts": {},
+            "ansible_forks": 5,
+            "ansible_host": "192.168.111.104",
+            "ansible_inventory_sources": [
+                "/home/bin101/code/ansible_exercises/sec8/hosts.yml"
+            ],
+            "ansible_playbook_python": "/home/bin101/code/ansible_exercises/ansible_exercises/bin/python3",
+            "ansible_python_interpreter": "/usr/bin/python3",
+            "ansible_run_tags": [
+                "all"
+            ],
+            "ansible_skip_tags": [],
+            "ansible_ssh_private_key_file": "~/.ssh/id_ed25519",
+            "ansible_user": "vagrant",
+            "ansible_verbosity": 0,
+            "ansible_version": {
+                "full": "2.17.7",
+                "major": 2,
+                "minor": 17,
+                "revision": 7,
+                "string": "2.17.7"
+            },
+            "group_names": [
+                "ungrouped"
+            ],
+            "groups": {
+                "all": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike",
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "db": [
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "ungrouped": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike"
+                ]
+            },
+            "inventory_dir": "/home/bin101/code/ansible_exercises/sec8",
+            "inventory_file": "/home/bin101/code/ansible_exercises/sec8/hosts.yml",
+            "inventory_hostname": "nijyo",
+            "inventory_hostname_short": "nijyo",
+            "omit": "__omit_place_holder__e1cc1e2b0671182f374338d7d4194380d53eab97",
+            "playbook_dir": "/home/bin101/code/ansible_exercises/sec11"
+        },
+        "oike": {
+            "ansible_check_mode": false,
+            "ansible_config_file": null,
+            "ansible_diff_mode": false,
+            "ansible_facts": {},
+            "ansible_forks": 5,
+            "ansible_host": "192.168.111.106",
+            "ansible_inventory_sources": [
+                "/home/bin101/code/ansible_exercises/sec8/hosts.yml"
+            ],
+            "ansible_playbook_python": "/home/bin101/code/ansible_exercises/ansible_exercises/bin/python3",
+            "ansible_python_interpreter": "/usr/bin/python3",
+            "ansible_run_tags": [
+                "all"
+            ],
+            "ansible_skip_tags": [],
+            "ansible_ssh_private_key_file": "~/.ssh/id_ed25519",
+            "ansible_user": "vagrant",
+            "ansible_verbosity": 0,
+            "ansible_version": {
+                "full": "2.17.7",
+                "major": 2,
+                "minor": 17,
+                "revision": 7,
+                "string": "2.17.7"
+            },
+            "group_names": [
+                "ungrouped"
+            ],
+            "groups": {
+                "all": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike",
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "db": [
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "ungrouped": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike"
+                ]
+            },
+            "inventory_dir": "/home/bin101/code/ansible_exercises/sec8",
+            "inventory_file": "/home/bin101/code/ansible_exercises/sec8/hosts.yml",
+            "inventory_hostname": "oike",
+            "inventory_hostname_short": "oike",
+            "omit": "__omit_place_holder__e1cc1e2b0671182f374338d7d4194380d53eab97",
+            "playbook_dir": "/home/bin101/code/ansible_exercises/sec11"
+        },
+        "oshikoji": {
+            "ansible_check_mode": false,
+            "ansible_config_file": null,
+            "ansible_diff_mode": false,
+            "ansible_facts": {},
+            "ansible_forks": 5,
+            "ansible_host": "192.168.111.105",
+            "ansible_inventory_sources": [
+                "/home/bin101/code/ansible_exercises/sec8/hosts.yml"
+            ],
+            "ansible_playbook_python": "/home/bin101/code/ansible_exercises/ansible_exercises/bin/python3",
+            "ansible_python_interpreter": "/usr/bin/python3",
+            "ansible_run_tags": [
+                "all"
+            ],
+            "ansible_skip_tags": [],
+            "ansible_ssh_private_key_file": "~/.ssh/id_ed25519",
+            "ansible_user": "vagrant",
+            "ansible_verbosity": 0,
+            "ansible_version": {
+                "full": "2.17.7",
+                "major": 2,
+                "minor": 17,
+                "revision": 7,
+                "string": "2.17.7"
+            },
+            "group_names": [
+                "ungrouped"
+            ],
+            "groups": {
+                "all": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike",
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "db": [
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "ungrouped": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike"
+                ]
+            },
+            "inventory_dir": "/home/bin101/code/ansible_exercises/sec8",
+            "inventory_file": "/home/bin101/code/ansible_exercises/sec8/hosts.yml",
+            "inventory_hostname": "oshikoji",
+            "inventory_hostname_short": "oshikoji",
+            "omit": "__omit_place_holder__e1cc1e2b0671182f374338d7d4194380d53eab97",
+            "playbook_dir": "/home/bin101/code/ansible_exercises/sec11"
+        },
+        "takeyamachi": {
+            "ansible_check_mode": false,
+            "ansible_config_file": null,
+            "ansible_diff_mode": false,
+            "ansible_facts": {},
+            "ansible_forks": 5,
+            "ansible_host": "192.168.111.102",
+            "ansible_inventory_sources": [
+                "/home/bin101/code/ansible_exercises/sec8/hosts.yml"
+            ],
+            "ansible_playbook_python": "/home/bin101/code/ansible_exercises/ansible_exercises/bin/python3",
+            "ansible_python_interpreter": "/usr/bin/python3",
+            "ansible_run_tags": [
+                "all"
+            ],
+            "ansible_skip_tags": [],
+            "ansible_ssh_private_key_file": "~/.ssh/id_ed25519",
+            "ansible_user": "vagrant",
+            "ansible_verbosity": 0,
+            "ansible_version": {
+                "full": "2.17.7",
+                "major": 2,
+                "minor": 17,
+                "revision": 7,
+                "string": "2.17.7"
+            },
+            "db_password": "tiger",
+            "db_port": 1521,
+            "db_user": "scott",
+            "group_names": [
+                "db"
+            ],
+            "groups": {
+                "all": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike",
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "db": [
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "ungrouped": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike"
+                ]
+            },
+            "inventory_dir": "/home/bin101/code/ansible_exercises/sec8",
+            "inventory_file": "/home/bin101/code/ansible_exercises/sec8/hosts.yml",
+            "inventory_hostname": "takeyamachi",
+            "inventory_hostname_short": "takeyamachi",
+            "omit": "__omit_place_holder__e1cc1e2b0671182f374338d7d4194380d53eab97",
+            "playbook_dir": "/home/bin101/code/ansible_exercises/sec11"
+        }
+    }
+}
+ok: [marutamachi] => {
+    "hostvars": {
+        "ebisugawa": {
+            "ansible_check_mode": false,
+            "ansible_config_file": null,
+            "ansible_diff_mode": false,
+            "ansible_facts": {},
+            "ansible_forks": 5,
+            "ansible_host": "192.168.111.103",
+            "ansible_inventory_sources": [
+                "/home/bin101/code/ansible_exercises/sec8/hosts.yml"
+            ],
+            "ansible_playbook_python": "/home/bin101/code/ansible_exercises/ansible_exercises/bin/python3",
+            "ansible_python_interpreter": "/usr/bin/python3",
+            "ansible_run_tags": [
+                "all"
+            ],
+            "ansible_skip_tags": [],
+            "ansible_ssh_private_key_file": "~/.ssh/id_ed25519",
+            "ansible_user": "vagrant",
+            "ansible_verbosity": 0,
+            "ansible_version": {
+                "full": "2.17.7",
+                "major": 2,
+                "minor": 17,
+                "revision": 7,
+                "string": "2.17.7"
+            },
+            "group_names": [
+                "ungrouped"
+            ],
+            "groups": {
+                "all": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike",
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "db": [
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "ungrouped": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike"
+                ]
+            },
+            "inventory_dir": "/home/bin101/code/ansible_exercises/sec8",
+            "inventory_file": "/home/bin101/code/ansible_exercises/sec8/hosts.yml",
+            "inventory_hostname": "ebisugawa",
+            "inventory_hostname_short": "ebisugawa",
+            "omit": "__omit_place_holder__e1cc1e2b0671182f374338d7d4194380d53eab97",
+            "playbook_dir": "/home/bin101/code/ansible_exercises/sec11"
+        },
+        "marutamachi": {
+            "ansible_check_mode": false,
+            "ansible_config_file": null,
+            "ansible_diff_mode": false,
+            "ansible_facts": {},
+            "ansible_forks": 5,
+            "ansible_host": "192.168.111.101",
+            "ansible_inventory_sources": [
+                "/home/bin101/code/ansible_exercises/sec8/hosts.yml"
+            ],
+            "ansible_playbook_python": "/home/bin101/code/ansible_exercises/ansible_exercises/bin/python3",
+            "ansible_python_interpreter": "/usr/bin/python3",
+            "ansible_run_tags": [
+                "all"
+            ],
+            "ansible_skip_tags": [],
+            "ansible_ssh_private_key_file": "~/.ssh/id_ed25519",
+            "ansible_user": "vagrant",
+            "ansible_verbosity": 0,
+            "ansible_version": {
+                "full": "2.17.7",
+                "major": 2,
+                "minor": 17,
+                "revision": 7,
+                "string": "2.17.7"
+            },
+            "db_password": "tiger",
+            "db_port": 1521,
+            "db_user": "scott",
+            "group_names": [
+                "db"
+            ],
+            "groups": {
+                "all": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike",
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "db": [
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "ungrouped": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike"
+                ]
+            },
+            "inventory_dir": "/home/bin101/code/ansible_exercises/sec8",
+            "inventory_file": "/home/bin101/code/ansible_exercises/sec8/hosts.yml",
+            "inventory_hostname": "marutamachi",
+            "inventory_hostname_short": "marutamachi",
+            "omit": "__omit_place_holder__e1cc1e2b0671182f374338d7d4194380d53eab97",
+            "playbook_dir": "/home/bin101/code/ansible_exercises/sec11"
+        },
+        "nijyo": {
+            "ansible_check_mode": false,
+            "ansible_config_file": null,
+            "ansible_diff_mode": false,
+            "ansible_facts": {},
+            "ansible_forks": 5,
+            "ansible_host": "192.168.111.104",
+            "ansible_inventory_sources": [
+                "/home/bin101/code/ansible_exercises/sec8/hosts.yml"
+            ],
+            "ansible_playbook_python": "/home/bin101/code/ansible_exercises/ansible_exercises/bin/python3",
+            "ansible_python_interpreter": "/usr/bin/python3",
+            "ansible_run_tags": [
+                "all"
+            ],
+            "ansible_skip_tags": [],
+            "ansible_ssh_private_key_file": "~/.ssh/id_ed25519",
+            "ansible_user": "vagrant",
+            "ansible_verbosity": 0,
+            "ansible_version": {
+                "full": "2.17.7",
+                "major": 2,
+                "minor": 17,
+                "revision": 7,
+                "string": "2.17.7"
+            },
+            "group_names": [
+                "ungrouped"
+            ],
+            "groups": {
+                "all": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike",
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "db": [
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "ungrouped": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike"
+                ]
+            },
+            "inventory_dir": "/home/bin101/code/ansible_exercises/sec8",
+            "inventory_file": "/home/bin101/code/ansible_exercises/sec8/hosts.yml",
+            "inventory_hostname": "nijyo",
+            "inventory_hostname_short": "nijyo",
+            "omit": "__omit_place_holder__e1cc1e2b0671182f374338d7d4194380d53eab97",
+            "playbook_dir": "/home/bin101/code/ansible_exercises/sec11"
+        },
+        "oike": {
+            "ansible_check_mode": false,
+            "ansible_config_file": null,
+            "ansible_diff_mode": false,
+            "ansible_facts": {},
+            "ansible_forks": 5,
+            "ansible_host": "192.168.111.106",
+            "ansible_inventory_sources": [
+                "/home/bin101/code/ansible_exercises/sec8/hosts.yml"
+            ],
+            "ansible_playbook_python": "/home/bin101/code/ansible_exercises/ansible_exercises/bin/python3",
+            "ansible_python_interpreter": "/usr/bin/python3",
+            "ansible_run_tags": [
+                "all"
+            ],
+            "ansible_skip_tags": [],
+            "ansible_ssh_private_key_file": "~/.ssh/id_ed25519",
+            "ansible_user": "vagrant",
+            "ansible_verbosity": 0,
+            "ansible_version": {
+                "full": "2.17.7",
+                "major": 2,
+                "minor": 17,
+                "revision": 7,
+                "string": "2.17.7"
+            },
+            "group_names": [
+                "ungrouped"
+            ],
+            "groups": {
+                "all": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike",
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "db": [
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "ungrouped": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike"
+                ]
+            },
+            "inventory_dir": "/home/bin101/code/ansible_exercises/sec8",
+            "inventory_file": "/home/bin101/code/ansible_exercises/sec8/hosts.yml",
+            "inventory_hostname": "oike",
+            "inventory_hostname_short": "oike",
+            "omit": "__omit_place_holder__e1cc1e2b0671182f374338d7d4194380d53eab97",
+            "playbook_dir": "/home/bin101/code/ansible_exercises/sec11"
+        },
+        "oshikoji": {
+            "ansible_check_mode": false,
+            "ansible_config_file": null,
+            "ansible_diff_mode": false,
+            "ansible_facts": {},
+            "ansible_forks": 5,
+            "ansible_host": "192.168.111.105",
+            "ansible_inventory_sources": [
+                "/home/bin101/code/ansible_exercises/sec8/hosts.yml"
+            ],
+            "ansible_playbook_python": "/home/bin101/code/ansible_exercises/ansible_exercises/bin/python3",
+            "ansible_python_interpreter": "/usr/bin/python3",
+            "ansible_run_tags": [
+                "all"
+            ],
+            "ansible_skip_tags": [],
+            "ansible_ssh_private_key_file": "~/.ssh/id_ed25519",
+            "ansible_user": "vagrant",
+            "ansible_verbosity": 0,
+            "ansible_version": {
+                "full": "2.17.7",
+                "major": 2,
+                "minor": 17,
+                "revision": 7,
+                "string": "2.17.7"
+            },
+            "group_names": [
+                "ungrouped"
+            ],
+            "groups": {
+                "all": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike",
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "db": [
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "ungrouped": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike"
+                ]
+            },
+            "inventory_dir": "/home/bin101/code/ansible_exercises/sec8",
+            "inventory_file": "/home/bin101/code/ansible_exercises/sec8/hosts.yml",
+            "inventory_hostname": "oshikoji",
+            "inventory_hostname_short": "oshikoji",
+            "omit": "__omit_place_holder__e1cc1e2b0671182f374338d7d4194380d53eab97",
+            "playbook_dir": "/home/bin101/code/ansible_exercises/sec11"
+        },
+        "takeyamachi": {
+            "ansible_check_mode": false,
+            "ansible_config_file": null,
+            "ansible_diff_mode": false,
+            "ansible_facts": {},
+            "ansible_forks": 5,
+            "ansible_host": "192.168.111.102",
+            "ansible_inventory_sources": [
+                "/home/bin101/code/ansible_exercises/sec8/hosts.yml"
+            ],
+            "ansible_playbook_python": "/home/bin101/code/ansible_exercises/ansible_exercises/bin/python3",
+            "ansible_python_interpreter": "/usr/bin/python3",
+            "ansible_run_tags": [
+                "all"
+            ],
+            "ansible_skip_tags": [],
+            "ansible_ssh_private_key_file": "~/.ssh/id_ed25519",
+            "ansible_user": "vagrant",
+            "ansible_verbosity": 0,
+            "ansible_version": {
+                "full": "2.17.7",
+                "major": 2,
+                "minor": 17,
+                "revision": 7,
+                "string": "2.17.7"
+            },
+            "db_password": "tiger",
+            "db_port": 1521,
+            "db_user": "scott",
+            "group_names": [
+                "db"
+            ],
+            "groups": {
+                "all": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike",
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "db": [
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "ungrouped": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike"
+                ]
+            },
+            "inventory_dir": "/home/bin101/code/ansible_exercises/sec8",
+            "inventory_file": "/home/bin101/code/ansible_exercises/sec8/hosts.yml",
+            "inventory_hostname": "takeyamachi",
+            "inventory_hostname_short": "takeyamachi",
+            "omit": "__omit_place_holder__e1cc1e2b0671182f374338d7d4194380d53eab97",
+            "playbook_dir": "/home/bin101/code/ansible_exercises/sec11"
+        }
+    }
+}
+ok: [takeyamachi] => {
+    "hostvars": {
+        "ebisugawa": {
+            "ansible_check_mode": false,
+            "ansible_config_file": null,
+            "ansible_diff_mode": false,
+            "ansible_facts": {},
+            "ansible_forks": 5,
+            "ansible_host": "192.168.111.103",
+            "ansible_inventory_sources": [
+                "/home/bin101/code/ansible_exercises/sec8/hosts.yml"
+            ],
+            "ansible_playbook_python": "/home/bin101/code/ansible_exercises/ansible_exercises/bin/python3",
+            "ansible_python_interpreter": "/usr/bin/python3",
+            "ansible_run_tags": [
+                "all"
+            ],
+            "ansible_skip_tags": [],
+            "ansible_ssh_private_key_file": "~/.ssh/id_ed25519",
+            "ansible_user": "vagrant",
+            "ansible_verbosity": 0,
+            "ansible_version": {
+                "full": "2.17.7",
+                "major": 2,
+                "minor": 17,
+                "revision": 7,
+                "string": "2.17.7"
+            },
+            "group_names": [
+                "ungrouped"
+            ],
+            "groups": {
+                "all": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike",
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "db": [
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "ungrouped": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike"
+                ]
+            },
+            "inventory_dir": "/home/bin101/code/ansible_exercises/sec8",
+            "inventory_file": "/home/bin101/code/ansible_exercises/sec8/hosts.yml",
+            "inventory_hostname": "ebisugawa",
+            "inventory_hostname_short": "ebisugawa",
+            "omit": "__omit_place_holder__e1cc1e2b0671182f374338d7d4194380d53eab97",
+            "playbook_dir": "/home/bin101/code/ansible_exercises/sec11"
+        },
+        "marutamachi": {
+            "ansible_check_mode": false,
+            "ansible_config_file": null,
+            "ansible_diff_mode": false,
+            "ansible_facts": {},
+            "ansible_forks": 5,
+            "ansible_host": "192.168.111.101",
+            "ansible_inventory_sources": [
+                "/home/bin101/code/ansible_exercises/sec8/hosts.yml"
+            ],
+            "ansible_playbook_python": "/home/bin101/code/ansible_exercises/ansible_exercises/bin/python3",
+            "ansible_python_interpreter": "/usr/bin/python3",
+            "ansible_run_tags": [
+                "all"
+            ],
+            "ansible_skip_tags": [],
+            "ansible_ssh_private_key_file": "~/.ssh/id_ed25519",
+            "ansible_user": "vagrant",
+            "ansible_verbosity": 0,
+            "ansible_version": {
+                "full": "2.17.7",
+                "major": 2,
+                "minor": 17,
+                "revision": 7,
+                "string": "2.17.7"
+            },
+            "db_password": "tiger",
+            "db_port": 1521,
+            "db_user": "scott",
+            "group_names": [
+                "db"
+            ],
+            "groups": {
+                "all": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike",
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "db": [
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "ungrouped": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike"
+                ]
+            },
+            "inventory_dir": "/home/bin101/code/ansible_exercises/sec8",
+            "inventory_file": "/home/bin101/code/ansible_exercises/sec8/hosts.yml",
+            "inventory_hostname": "marutamachi",
+            "inventory_hostname_short": "marutamachi",
+            "omit": "__omit_place_holder__e1cc1e2b0671182f374338d7d4194380d53eab97",
+            "playbook_dir": "/home/bin101/code/ansible_exercises/sec11"
+        },
+        "nijyo": {
+            "ansible_check_mode": false,
+            "ansible_config_file": null,
+            "ansible_diff_mode": false,
+            "ansible_facts": {},
+            "ansible_forks": 5,
+            "ansible_host": "192.168.111.104",
+            "ansible_inventory_sources": [
+                "/home/bin101/code/ansible_exercises/sec8/hosts.yml"
+            ],
+            "ansible_playbook_python": "/home/bin101/code/ansible_exercises/ansible_exercises/bin/python3",
+            "ansible_python_interpreter": "/usr/bin/python3",
+            "ansible_run_tags": [
+                "all"
+            ],
+            "ansible_skip_tags": [],
+            "ansible_ssh_private_key_file": "~/.ssh/id_ed25519",
+            "ansible_user": "vagrant",
+            "ansible_verbosity": 0,
+            "ansible_version": {
+                "full": "2.17.7",
+                "major": 2,
+                "minor": 17,
+                "revision": 7,
+                "string": "2.17.7"
+            },
+            "group_names": [
+                "ungrouped"
+            ],
+            "groups": {
+                "all": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike",
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "db": [
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "ungrouped": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike"
+                ]
+            },
+            "inventory_dir": "/home/bin101/code/ansible_exercises/sec8",
+            "inventory_file": "/home/bin101/code/ansible_exercises/sec8/hosts.yml",
+            "inventory_hostname": "nijyo",
+            "inventory_hostname_short": "nijyo",
+            "omit": "__omit_place_holder__e1cc1e2b0671182f374338d7d4194380d53eab97",
+            "playbook_dir": "/home/bin101/code/ansible_exercises/sec11"
+        },
+        "oike": {
+            "ansible_check_mode": false,
+            "ansible_config_file": null,
+            "ansible_diff_mode": false,
+            "ansible_facts": {},
+            "ansible_forks": 5,
+            "ansible_host": "192.168.111.106",
+            "ansible_inventory_sources": [
+                "/home/bin101/code/ansible_exercises/sec8/hosts.yml"
+            ],
+            "ansible_playbook_python": "/home/bin101/code/ansible_exercises/ansible_exercises/bin/python3",
+            "ansible_python_interpreter": "/usr/bin/python3",
+            "ansible_run_tags": [
+                "all"
+            ],
+            "ansible_skip_tags": [],
+            "ansible_ssh_private_key_file": "~/.ssh/id_ed25519",
+            "ansible_user": "vagrant",
+            "ansible_verbosity": 0,
+            "ansible_version": {
+                "full": "2.17.7",
+                "major": 2,
+                "minor": 17,
+                "revision": 7,
+                "string": "2.17.7"
+            },
+            "group_names": [
+                "ungrouped"
+            ],
+            "groups": {
+                "all": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike",
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "db": [
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "ungrouped": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike"
+                ]
+            },
+            "inventory_dir": "/home/bin101/code/ansible_exercises/sec8",
+            "inventory_file": "/home/bin101/code/ansible_exercises/sec8/hosts.yml",
+            "inventory_hostname": "oike",
+            "inventory_hostname_short": "oike",
+            "omit": "__omit_place_holder__e1cc1e2b0671182f374338d7d4194380d53eab97",
+            "playbook_dir": "/home/bin101/code/ansible_exercises/sec11"
+        },
+        "oshikoji": {
+            "ansible_check_mode": false,
+            "ansible_config_file": null,
+            "ansible_diff_mode": false,
+            "ansible_facts": {},
+            "ansible_forks": 5,
+            "ansible_host": "192.168.111.105",
+            "ansible_inventory_sources": [
+                "/home/bin101/code/ansible_exercises/sec8/hosts.yml"
+            ],
+            "ansible_playbook_python": "/home/bin101/code/ansible_exercises/ansible_exercises/bin/python3",
+            "ansible_python_interpreter": "/usr/bin/python3",
+            "ansible_run_tags": [
+                "all"
+            ],
+            "ansible_skip_tags": [],
+            "ansible_ssh_private_key_file": "~/.ssh/id_ed25519",
+            "ansible_user": "vagrant",
+            "ansible_verbosity": 0,
+            "ansible_version": {
+                "full": "2.17.7",
+                "major": 2,
+                "minor": 17,
+                "revision": 7,
+                "string": "2.17.7"
+            },
+            "group_names": [
+                "ungrouped"
+            ],
+            "groups": {
+                "all": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike",
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "db": [
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "ungrouped": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike"
+                ]
+            },
+            "inventory_dir": "/home/bin101/code/ansible_exercises/sec8",
+            "inventory_file": "/home/bin101/code/ansible_exercises/sec8/hosts.yml",
+            "inventory_hostname": "oshikoji",
+            "inventory_hostname_short": "oshikoji",
+            "omit": "__omit_place_holder__e1cc1e2b0671182f374338d7d4194380d53eab97",
+            "playbook_dir": "/home/bin101/code/ansible_exercises/sec11"
+        },
+        "takeyamachi": {
+            "ansible_check_mode": false,
+            "ansible_config_file": null,
+            "ansible_diff_mode": false,
+            "ansible_facts": {},
+            "ansible_forks": 5,
+            "ansible_host": "192.168.111.102",
+            "ansible_inventory_sources": [
+                "/home/bin101/code/ansible_exercises/sec8/hosts.yml"
+            ],
+            "ansible_playbook_python": "/home/bin101/code/ansible_exercises/ansible_exercises/bin/python3",
+            "ansible_python_interpreter": "/usr/bin/python3",
+            "ansible_run_tags": [
+                "all"
+            ],
+            "ansible_skip_tags": [],
+            "ansible_ssh_private_key_file": "~/.ssh/id_ed25519",
+            "ansible_user": "vagrant",
+            "ansible_verbosity": 0,
+            "ansible_version": {
+                "full": "2.17.7",
+                "major": 2,
+                "minor": 17,
+                "revision": 7,
+                "string": "2.17.7"
+            },
+            "db_password": "tiger",
+            "db_port": 1521,
+            "db_user": "scott",
+            "group_names": [
+                "db"
+            ],
+            "groups": {
+                "all": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike",
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "db": [
+                    "marutamachi",
+                    "takeyamachi"
+                ],
+                "ungrouped": [
+                    "ebisugawa",
+                    "nijyo",
+                    "oshikoji",
+                    "oike"
+                ]
+            },
+            "inventory_dir": "/home/bin101/code/ansible_exercises/sec8",
+            "inventory_file": "/home/bin101/code/ansible_exercises/sec8/hosts.yml",
+            "inventory_hostname": "takeyamachi",
+            "inventory_hostname_short": "takeyamachi",
+            "omit": "__omit_place_holder__e1cc1e2b0671182f374338d7d4194380d53eab97",
+            "playbook_dir": "/home/bin101/code/ansible_exercises/sec11"
+        }
+    }
+}
+
+PLAY RECAP *********************************************************************
+ebisugawa                  : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+marutamachi                : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+nijyo                      : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+oike                       : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+oshikoji                   : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+takeyamachi                : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
