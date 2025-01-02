@@ -1,0 +1,1 @@
+`ansible-playbook -i ../sec8/hosts.yml main.yml > output.txt`を実行した

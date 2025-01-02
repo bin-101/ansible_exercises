@@ -1,0 +1,119 @@
+
+PLAY [Check the value of the Magic variable.] **********************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [nijyo]
+ok: [marutamachi]
+ok: [oshikoji]
+ok: [ebisugawa]
+ok: [oike]
+ok: [takeyamachi]
+
+TASK [ansible_all_ipv4_addresses] **********************************************
+ok: [ebisugawa] => {
+    "ansible_facts['all_ipv4_addresses'][0]": "192.168.121.181"
+}
+ok: [nijyo] => {
+    "ansible_facts['all_ipv4_addresses'][0]": "192.168.111.104"
+}
+ok: [oshikoji] => {
+    "ansible_facts['all_ipv4_addresses'][0]": "192.168.121.157"
+}
+ok: [oike] => {
+    "ansible_facts['all_ipv4_addresses'][0]": "192.168.121.35"
+}
+ok: [marutamachi] => {
+    "ansible_facts['all_ipv4_addresses'][0]": "192.168.121.247"
+}
+ok: [takeyamachi] => {
+    "ansible_facts['all_ipv4_addresses'][0]": "192.168.121.42"
+}
+
+TASK [ansible_distribution] ****************************************************
+ok: [ebisugawa] => {
+    "ansible_facts['distribution']": "Debian"
+}
+ok: [nijyo] => {
+    "ansible_facts['distribution']": "Debian"
+}
+ok: [oshikoji] => {
+    "ansible_facts['distribution']": "Debian"
+}
+ok: [oike] => {
+    "ansible_facts['distribution']": "Debian"
+}
+ok: [marutamachi] => {
+    "ansible_facts['distribution']": "Debian"
+}
+ok: [takeyamachi] => {
+    "ansible_facts['distribution']": "Debian"
+}
+
+TASK [ansible_os_family] *******************************************************
+ok: [ebisugawa] => {
+    "ansible_facts['os_family']": "Debian"
+}
+ok: [nijyo] => {
+    "ansible_facts['os_family']": "Debian"
+}
+ok: [oshikoji] => {
+    "ansible_facts['os_family']": "Debian"
+}
+ok: [oike] => {
+    "ansible_facts['os_family']": "Debian"
+}
+ok: [marutamachi] => {
+    "ansible_facts['os_family']": "Debian"
+}
+ok: [takeyamachi] => {
+    "ansible_facts['os_family']": "Debian"
+}
+
+TASK [ansible_default_ipv4.gateway] ********************************************
+ok: [ebisugawa] => {
+    "ansible_facts['default_ipv4']['gateway']": "192.168.121.1"
+}
+ok: [nijyo] => {
+    "ansible_facts['default_ipv4']['gateway']": "192.168.121.1"
+}
+ok: [oshikoji] => {
+    "ansible_facts['default_ipv4']['gateway']": "192.168.121.1"
+}
+ok: [oike] => {
+    "ansible_facts['default_ipv4']['gateway']": "192.168.121.1"
+}
+ok: [marutamachi] => {
+    "ansible_facts['default_ipv4']['gateway']": "192.168.121.1"
+}
+ok: [takeyamachi] => {
+    "ansible_facts['default_ipv4']['gateway']": "192.168.121.1"
+}
+
+TASK [ansible_distribution_version] ********************************************
+ok: [ebisugawa] => {
+    "ansible_facts['distribution_version']": "10.13"
+}
+ok: [nijyo] => {
+    "ansible_facts['distribution_version']": "10.13"
+}
+ok: [oshikoji] => {
+    "ansible_facts['distribution_version']": "10.13"
+}
+ok: [oike] => {
+    "ansible_facts['distribution_version']": "10.13"
+}
+ok: [marutamachi] => {
+    "ansible_facts['distribution_version']": "10.13"
+}
+ok: [takeyamachi] => {
+    "ansible_facts['distribution_version']": "10.13"
+}
+
+PLAY RECAP *********************************************************************
+ebisugawa                  : ok=6    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+marutamachi                : ok=6    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+nijyo                      : ok=6    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+oike                       : ok=6    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+oshikoji                   : ok=6    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+takeyamachi                : ok=6    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+

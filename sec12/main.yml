@@ -1,0 +1,21 @@
+---
+- name: Check the value of the Magic variable.
+  hosts: all
+  gather_facts: yes
+
+  tasks:
+    - name: ansible_all_ipv4_addresses
+      ansible.builtin.debug:
+        var: ansible_facts['all_ipv4_addresses'][0]
+    - name: ansible_distribution
+      ansible.builtin.debug:
+        var: ansible_facts['distribution']
+    - name: ansible_os_family
+      ansible.builtin.debug:
+        var: ansible_facts['os_family']
+    - name: ansible_default_ipv4.gateway
+      ansible.builtin.debug:
+        var: ansible_facts['default_ipv4']['gateway']
+    - name: ansible_distribution_version
+      ansible.builtin.debug:
+        var: ansible_facts['distribution_version']
