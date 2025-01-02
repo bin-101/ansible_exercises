@@ -1,0 +1,5 @@
+- `(ansible_exercises) bin101@bin101-Inspiron-16-5635:~/code/ansible_exercises/sec10$ ansible marutamachi -i ../sec8/hosts.yml -m ansible.builtin.setup > facts.txt`を実行した
+- Q1: "ansible_fqdn": "marutamachi.example.jp",
+- Q2: "ansible_distribution": "Debian",
+- Q3: "ansible_os_family": "Debian",
+- Q4: "ansible_distribution_major_version": "10",
