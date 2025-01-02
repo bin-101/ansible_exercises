@@ -16,7 +16,7 @@ VBoxManage controlvm "ansible_exercises_default_1735736659595_90773" poweroff
 ```
 bin101@bin101-Inspiron-16-5635:~/code/ansible_exercises$ virsh list --all
 bin101@bin101-Inspiron-16-5635:~/code/ansible_exercises$ virsh net-start ansible_exercises0
-virsh start ansible_exercises_marutamachi
+bin101@bin101-Inspiron-16-5635:~/code/ansible_exercises$ virsh start ansible_exercises_marutamachi
 ```
 - libvirtをインストール
 ```
