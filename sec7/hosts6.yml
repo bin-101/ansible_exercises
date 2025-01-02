@@ -1,0 +1,12 @@
+---
+all:
+  children:
+    db:
+      hosts:
+        node1:
+        node2:
+  hosts:
+    node3:
+    node4:
+    node5:
+    node6:
