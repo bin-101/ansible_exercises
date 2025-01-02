@@ -1,0 +1,12 @@
+---
+all:
+  children:
+    db:
+      hosts:
+        marutamachi:
+        takeyamachi:
+  hosts:
+    ebisugawa:
+    nijyo:
+    oshikoji:
+    oike:
