@@ -1,0 +1,27 @@
+---
+- name: Set the server name in the Debian system.
+  ansible.builtin.lineinfile:
+    path: "{{ apache2_conf_path }}"
+    insertafter: "^#ServerRoot "
+    line: "ServerName {{ ansible_facts['hostname'] }}.exam.local"
+    state: present
+  listen:
+    - start apache2 service
+- name: Change the listening port number of the apache2 service on Debian systems.
+  ansible.builtin.lineinfile:
+    path: "{{ apache2_port_conf_path }}"
+    regexp: "^Listen 80"
+    line: "Listen {{ apache2_listening_port }}"
+    state: present
+  listen:
+    - start apache2 service
+- name: Check the Apache2 configuration files on Debian systems.
+  ansible.builtin.command: apache2ctl configtest 
+  listen:
+    - start apache2 service
+- name: Start/Restart the apache2 service on the Debian system.
+  ansible.builtin.systemd:
+    name: "{{ apache2_service_name }}"
+    state: restarted
+  listen:
+    - start apache2 service

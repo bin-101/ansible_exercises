@@ -1,0 +1,7 @@
+---
+apache_listening_port: 8080
+apache_conf_path: /etc/httpd/conf/httpd.conf
+apache_package_name: httpd
+apache_service_name: httpd.service
+redhat_firewwall_package_name: firewalld
+redhat_firewwall_service_name: firewalld.service

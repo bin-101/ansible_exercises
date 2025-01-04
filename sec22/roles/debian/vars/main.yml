@@ -1,0 +1,9 @@
+---
+ssh_listening_port: 22
+apache2_listening_port: 8080
+apache2_conf_path: /etc/apache2/apache2.conf
+apache2_port_conf_path: /etc/apache2/ports.conf
+apache2_package_name: apache2
+apache2_service_name: apache2.service
+debian_firewwall_package_name: ufw
+debian_firewwall_service_name: ufw.service

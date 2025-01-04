@@ -1,0 +1,23 @@
+---
+- name: Install the apache2 package on the Debian system.
+  ansible.builtin.apt:
+    name: "{{ apache2_package_name }}"
+    state: present
+  changed_when: true # handlerを実行するか確かめるため
+  notify:
+    - start apache2 service
+- name: Install the firewalld package on the Debian system.
+  ansible.builtin.apt:
+    name: "{{ debian_firewwall_package_name }}"
+    state: present
+- name: Start the firewalld service on the Debian system.
+  ansible.builtin.systemd:
+    name: "{{ debian_firewwall_service_name }}"
+    enabled: yes
+    state: started
+- name: Drill a hole for the apache2 port in the Debian system.
+  community.general.ufw:
+    rule: allow
+    to_port: "{{ apache2_listening_port }},{{ ssh_listening_port }}"
+    proto: tcp
+    state: enabled

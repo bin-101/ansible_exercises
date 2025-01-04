@@ -1,0 +1,32 @@
+---
+- name: Install the httpd package on the RedHat system version 7.
+  ansible.builtin.yum:
+    name: "{{ apache_package_name }}"
+    state: present
+  when:
+    - ansible_facts['distribution_major_version'] == "7"
+  notify:
+    - start httpd service
+- name: Install the httpd package on the RedHat system version 8.
+  ansible.builtin.dnf:
+    name: "{{ apache_package_name }}"
+    state: present
+  when:
+    - ansible_facts['distribution_major_version'] == "8"
+  notify:
+    - start httpd service
+- name: Install the firewalld package on the RedHat system.
+  ansible.builtin.yum:
+    name: "{{ redhat_firewwall_package_name }}"
+    state: present
+- name: Start the firewalld service on the RedHat system.
+  ansible.builtin.systemd:
+    name: "{{ redhat_firewwall_service_name }}"
+    enabled: yes
+    state: started
+- name: Drill a hole for the httpd port in the RedHat system.
+  ansible.posix.firewalld:
+    port: "{{ apache_listening_port }}/tcp"
+    permanent: yes
+    immediate: yes
+    state: enabled
