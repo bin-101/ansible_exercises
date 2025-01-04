@@ -1,0 +1,18 @@
+---
+- name: Identify the OS and install Apache.
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: RedHat
+      ansible.builtin.import_tasks:
+        file: ./redhat_apache.yml
+      when:
+      - inventory_hostname in groups['web']
+      - ansible_facts['os_family'] == "RedHat"
+    - name: Debian
+      ansible.builtin.import_tasks:
+        file: ./debian_apache.yml
+      when:
+        - inventory_hostname in groups['web']
+        - ansible_facts['os_family'] == "Debian"

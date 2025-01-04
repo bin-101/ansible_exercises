@@ -1,0 +1,8 @@
+- name: Debian family.
+  ansible.builtin.apt:
+    name: apache2
+    state: present
+- name: Start apache2 service.
+  ansible.builtin.systemd:
+    name: apache2.service
+    state: started
