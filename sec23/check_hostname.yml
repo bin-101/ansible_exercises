@@ -1,0 +1,9 @@
+---
+- name: Identify the OS and install Apache.
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: RedHat system
+      ansible.builtin.include_role:
+        name: "{{ inventory_hostname }}"
