@@ -1,0 +1,17 @@
+---
+- name: RedHat family with major version 7.
+  ansible.builtin.yum:
+    name: httpd
+    state: present
+  when:
+    - ansible_facts['distribution_major_version'] == "7"
+- name: RedHat family with major version 8.
+  ansible.builtin.dnf:
+    name: httpd
+    state: present
+  when:
+    - ansible_facts['distribution_major_version'] == "8"
+- name: Start httpd service.
+  ansible.builtin.systemd:
+    name: httpd.service
+    state: started
