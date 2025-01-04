@@ -1,0 +1,40 @@
+---
+- name: Identify the OS and install Apache. # 192.168.111.102でapache2が表示されることを確認
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: RedHat
+      block:
+      - name: RedHat family with major version 7.
+        ansible.builtin.yum:
+          name: httpd
+          state: present
+        when:
+          - ansible_facts['distribution_major_version'] == "7"
+      - name: RedHat family with major version 8.
+        ansible.builtin.dnf:
+          name: httpd
+          state: present
+        when:
+          - ansible_facts['distribution_major_version'] == "8"
+      - name: Start httpd service.
+        ansible.builtin.systemd:
+          name: httpd.service
+          state: started
+      when:
+        - ansible_facts['os_family'] == "RedHat"
+        - inventory_hostname in groups['web']
+    - name: Debian
+      block:
+      - name: Debian family.
+        ansible.builtin.apt:
+          name: apache2
+          state: present
+      - name: Start apache2 service.
+        ansible.builtin.systemd:
+          name: apache2.service
+          state: started
+      when:
+          - inventory_hostname in groups['web']
+          - ansible_facts['os_family'] == "Debian"

@@ -1,0 +1,51 @@
+
+PLAY [Identify the OS and install Apache.] *************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [takeyamachi]
+ok: [nijyo]
+ok: [ebisugawa]
+ok: [oshikoji]
+ok: [oike]
+
+TASK [RedHat family with major version 7.] *************************************
+skipping: [takeyamachi]
+skipping: [oshikoji]
+skipping: [nijyo]
+skipping: [ebisugawa]
+skipping: [oike]
+
+TASK [RedHat family with major version 8.] *************************************
+skipping: [takeyamachi]
+skipping: [oshikoji]
+skipping: [nijyo]
+skipping: [ebisugawa]
+skipping: [oike]
+
+TASK [Start httpd service.] ****************************************************
+skipping: [takeyamachi]
+skipping: [oshikoji]
+skipping: [nijyo]
+skipping: [ebisugawa]
+skipping: [oike]
+
+TASK [Debian family.] **********************************************************
+skipping: [nijyo]
+skipping: [ebisugawa]
+skipping: [oike]
+fatal: [oshikoji]: FAILED! => {"cache_update_time": 1735785016, "cache_updated": false, "changed": false, "msg": "'/usr/bin/apt-get -y -o \"Dpkg::Options::=--force-confdef\" -o \"Dpkg::Options::=--force-confold\"       install 'apache2=2.4.59-1~deb10u1'' failed: E: Could not get lock /var/lib/dpkg/lock-frontend - open (11: Resource temporarily unavailable)\nE: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?\n", "rc": 100, "stderr": "E: Could not get lock /var/lib/dpkg/lock-frontend - open (11: Resource temporarily unavailable)\nE: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?\n", "stderr_lines": ["E: Could not get lock /var/lib/dpkg/lock-frontend - open (11: Resource temporarily unavailable)", "E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?"], "stdout": "", "stdout_lines": []}
+changed: [takeyamachi]
+
+TASK [Start apache2 service.] **************************************************
+skipping: [nijyo]
+skipping: [ebisugawa]
+skipping: [oike]
+ok: [takeyamachi]
+
+PLAY RECAP *********************************************************************
+ebisugawa                  : ok=1    changed=0    unreachable=0    failed=0    skipped=5    rescued=0    ignored=0   
+nijyo                      : ok=1    changed=0    unreachable=0    failed=0    skipped=5    rescued=0    ignored=0   
+oike                       : ok=1    changed=0    unreachable=0    failed=0    skipped=5    rescued=0    ignored=0   
+oshikoji                   : ok=1    changed=0    unreachable=0    failed=1    skipped=3    rescued=0    ignored=0   
+takeyamachi                : ok=3    changed=1    unreachable=0    failed=0    skipped=3    rescued=0    ignored=0   
+
