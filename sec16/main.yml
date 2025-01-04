@@ -1,0 +1,64 @@
+---
+- name: NTP
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Install the package chrony.
+      ansible.builtin.apt:
+        name: chrony
+        state: present
+      changed_when: true
+      notify:
+        - restart chrony service
+  
+    - name: Overwrite and copy the file "chrony.txt" into the configuration file "/etc/chrony.conf".
+      ansible.builtin.copy:
+        src: "./chrony.txt"         # コピー元 ( コントロールノード ) のファイルのパス
+        dest: "/etc/chrony.conf"    # コピー先 ( 管理対象ノード ) のファイルのパス
+        owner: root                 # コピーした後のファイルのオーナー
+        group: root                 # コピーした後のファイルのグループ
+        mode: 0644                  # コピーした後のファイルのモード -rw-r--r--
+        force: yes                  # コピー先に同名のファイルが存在していたら上書きコピー
+        backup: yes                 # コピー先に同名のファイルが存在してたらバックアップする
+      notify:
+        - restart chrony service
+
+    - name: Install ufw.
+      ansible.builtin.apt:
+        name: ufw
+        state: present
+
+    - name: Ensure ufw is enabled.
+      ansible.builtin.command: ufw --force enable
+
+    - name: Allow NTP port 123/udp in ufw.
+      ansible.builtin.ufw:
+        rule: allow
+        port: 123
+        proto: udp
+
+    - name: Allow SSH port 22/TCP in ufw. # これがないとsshできなくなる
+      ansible.builtin.ufw:
+        rule: allow
+        port: 22
+        proto: tcp
+
+    - name: Verify
+      ansible.builtin.command:
+        cmd: systemctl status chrony.service
+      register: status
+      changed_when: false
+
+    - name: Display
+      ansible.builtin.debug:
+        var: status.stdout
+
+
+  handlers:
+    - name: Restart chrony.service.
+      ansible.builtin.systemd:
+        name: chrony.service
+        state: restarted
+      listen:
+        - restart chrony service

@@ -1,0 +1,38 @@
+
+PLAY [NTP] *********************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [takeyamachi]
+
+TASK [Install the package chrony.] *********************************************
+changed: [takeyamachi]
+
+TASK [Overwrite and copy the file "chrony.txt" into the configuration file "/etc/chrony.conf".] ***
+ok: [takeyamachi]
+
+TASK [Install ufw.] ************************************************************
+ok: [takeyamachi]
+
+TASK [Ensure ufw is enabled.] **************************************************
+changed: [takeyamachi]
+
+TASK [Allow NTP port 123/udp in ufw.] ******************************************
+ok: [takeyamachi]
+
+TASK [Allow SSH port 22/TCP in ufw.] *******************************************
+ok: [takeyamachi]
+
+TASK [Verify] ******************************************************************
+ok: [takeyamachi]
+
+TASK [Display] *****************************************************************
+ok: [takeyamachi] => {
+    "status.stdout": "● chrony.service - chrony, an NTP client/server\n   Loaded: loaded (/lib/systemd/system/chrony.service; enabled; vendor preset: enabled)\n   Active: active (running) since Thu 2025-01-02 11:29:17 JST; 2 days ago\n     Docs: man:chronyd(8)\n           man:chronyc(1)\n           man:chrony.conf(5)\n Main PID: 328 (chronyd)\n    Tasks: 2 (limit: 544)\n   Memory: 2.9M\n   CGroup: /system.slice/chrony.service\n           ├─328 /usr/sbin/chronyd -F -1\n           └─329 /usr/sbin/chronyd -F -1\n\nJan 02 11:31:55 takeyamachi chronyd[328]: Selected source 133.130.121.141\nJan 02 11:48:05 takeyamachi chronyd[328]: Selected source 202.182.111.234\nJan 02 12:01:00 takeyamachi chronyd[328]: Source 2400:8902::f03c:91ff:fe50:f5f0 replaced with 45.76.211.39\nJan 02 20:23:43 takeyamachi chronyd[328]: Selected source 133.130.121.141\nJan 03 20:44:58 takeyamachi chronyd[328]: Forward time jump detected!\nJan 03 20:44:58 takeyamachi chronyd[328]: Can't synchronise: no selectable sources\nJan 03 20:51:08 takeyamachi chronyd[328]: Forward time jump detected!\nJan 04 21:49:35 takeyamachi chronyd[328]: Forward time jump detected!\nJan 04 21:52:49 takeyamachi chronyd[328]: Selected source 160.16.113.133\nJan 04 21:52:49 takeyamachi chronyd[328]: System clock wrong by 4.116911 seconds, adjustment started"
+}
+
+RUNNING HANDLER [Restart chrony.service.] **************************************
+changed: [takeyamachi]
+
+PLAY RECAP *********************************************************************
+takeyamachi                : ok=10   changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
