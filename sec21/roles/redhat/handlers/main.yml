@@ -1,0 +1,26 @@
+---
+- name: Set the server name in the RedHat system.
+  ansible.builtin.lineinfile:
+    path: "{{ apache_conf_path }}"
+    regexp: "^#ServerName"
+    line: "ServerName {{ ansible_facts['fqdn'] }}:{{ apache_listening_port }}"
+    state: present
+  listen:
+    - start httpd service
+- name: Change the listening port number of the http service on RedHat systems.
+  ansible.builtin.lineinfile:
+    path: "{{ apache_conf_path }}"
+    regexp: "^Listen "
+    line: "Listen {{ apache_listening_port }}"
+    validate: httpd -t -f %s 
+    state: present
+  listen:
+    - start httpd service
+- name: Start/Restart the http service on the RedHat system.
+  ansible.builtin.systemd:
+    name: "{{ apache_service_name }}"
+    state: restarted
+  listen:
+    - start httpd service
+
+
