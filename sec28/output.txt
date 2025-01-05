@@ -1,0 +1,10 @@
+
+PLAY [Register an account.] ****************************************************
+
+TASK [Create a user account.] **************************************************
+ok: [takeyamachi] => (item={'name': 'taro', 'password': 'pass@taro'})
+ok: [takeyamachi] => (item={'name': 'jiro', 'password': 'pass@jiro'})
+
+PLAY RECAP *********************************************************************
+takeyamachi                : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
