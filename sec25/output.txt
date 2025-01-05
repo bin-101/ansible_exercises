@@ -1,0 +1,64 @@
+
+PLAY [Check the free disk space of each managed node.] *************************
+
+TASK [Check the free space.] ***************************************************
+ok: [oike]
+ok: [ebisugawa]
+ok: [nijyo]
+ok: [takeyamachi]
+ok: [oshikoji]
+
+TASK [Write down the free space information.] **********************************
+ok: [nijyo -> localhost] => (item=Filesystem                                        1K-blocks     Used Available Use% Mounted on)
+ok: [oike -> localhost] => (item=Filesystem                                        1K-blocks     Used Available Use% Mounted on)
+ok: [oshikoji -> localhost] => (item=Filesystem                                        1K-blocks     Used Available Use% Mounted on)
+ok: [ebisugawa -> localhost] => (item=Filesystem                                        1K-blocks     Used Available Use% Mounted on)
+ok: [takeyamachi -> localhost] => (item=Filesystem                                        1K-blocks     Used Available Use% Mounted on)
+ok: [oike -> localhost] => (item=udev                                                 232264        0    232264   0% /dev)
+ok: [nijyo -> localhost] => (item=udev                                                 232264        0    232264   0% /dev)
+ok: [takeyamachi -> localhost] => (item=udev                                                 232264        0    232264   0% /dev)
+ok: [oshikoji -> localhost] => (item=udev                                                 232264        0    232264   0% /dev)
+ok: [ebisugawa -> localhost] => (item=udev                                                 232264        0    232264   0% /dev)
+ok: [oike -> localhost] => (item=tmpfs                                                 49496     2232     47264   5% /run)
+ok: [takeyamachi -> localhost] => (item=tmpfs                                                 49496     4092     45404   9% /run)
+ok: [oshikoji -> localhost] => (item=tmpfs                                                 49496     2232     47264   5% /run)
+ok: [nijyo -> localhost] => (item=tmpfs                                                 49496     2232     47264   5% /run)
+ok: [ebisugawa -> localhost] => (item=tmpfs                                                 49496     2232     47264   5% /run)
+changed: [oshikoji -> localhost] => (item=/dev/vda1                                          20465232  1607092  17793232   9% /)
+changed: [takeyamachi -> localhost] => (item=/dev/vda1                                          20465232  1599704  17800620   9% /)
+changed: [oike -> localhost] => (item=/dev/vda1                                          20465232  1575164  17825160   9% /)
+changed: [ebisugawa -> localhost] => (item=/dev/vda1                                          20465232  1574896  17825428   9% /)
+ok: [nijyo -> localhost] => (item=/dev/vda1                                          20465232  1607068  17793256   9% /)
+ok: [oike -> localhost] => (item=tmpfs                                                247464        0    247464   0% /dev/shm)
+ok: [oshikoji -> localhost] => (item=tmpfs                                                247464        0    247464   0% /dev/shm)
+ok: [takeyamachi -> localhost] => (item=tmpfs                                                247464        0    247464   0% /dev/shm)
+ok: [ebisugawa -> localhost] => (item=tmpfs                                                247464        0    247464   0% /dev/shm)
+ok: [nijyo -> localhost] => (item=tmpfs                                                247464        0    247464   0% /dev/shm)
+ok: [takeyamachi -> localhost] => (item=tmpfs                                                  5120        0      5120   0% /run/lock)
+ok: [oshikoji -> localhost] => (item=tmpfs                                                  5120        0      5120   0% /run/lock)
+ok: [oike -> localhost] => (item=tmpfs                                                  5120        0      5120   0% /run/lock)
+ok: [ebisugawa -> localhost] => (item=tmpfs                                                  5120        0      5120   0% /run/lock)
+ok: [nijyo -> localhost] => (item=tmpfs                                                  5120        0      5120   0% /run/lock)
+ok: [takeyamachi -> localhost] => (item=tmpfs                                                247464        0    247464   0% /sys/fs/cgroup)
+ok: [oike -> localhost] => (item=tmpfs                                                247464        0    247464   0% /sys/fs/cgroup)
+ok: [oshikoji -> localhost] => (item=tmpfs                                                247464        0    247464   0% /sys/fs/cgroup)
+ok: [ebisugawa -> localhost] => (item=tmpfs                                                247464        0    247464   0% /sys/fs/cgroup)
+ok: [nijyo -> localhost] => (item=tmpfs                                                247464        0    247464   0% /sys/fs/cgroup)
+ok: [oike -> localhost] => (item=tmpfs                                                 49492        0     49492   0% /run/user/1000)
+ok: [oshikoji -> localhost] => (item=tmpfs                                                 49492        0     49492   0% /run/user/1000)
+ok: [takeyamachi -> localhost] => (item=192.168.121.1:/home/bin101/code/ansible_exercises 439653376 82452480 334794752  20% /vagrant)
+ok: [ebisugawa -> localhost] => (item=tmpfs                                                 49492        0     49492   0% /run/user/1000)
+ok: [nijyo -> localhost] => (item=tmpfs                                                 49492        0     49492   0% /run/user/1000)
+ok: [takeyamachi -> localhost] => (item=tmpfs                                                 49492        0     49492   0% /run/user/1000)
+ok: [oike -> localhost] => (item=192.168.121.1:/home/bin101/code/ansible_exercises 439653376 82452480 334794752  20% /vagrant)
+ok: [ebisugawa -> localhost] => (item=192.168.121.1:/home/bin101/code/ansible_exercises 439653376 82452480 334794752  20% /vagrant)
+ok: [oshikoji -> localhost] => (item=192.168.121.1:/home/bin101/code/ansible_exercises 439653376 82452480 334794752  20% /vagrant)
+ok: [nijyo -> localhost] => (item=192.168.121.1:/home/bin101/code/ansible_exercises 439653376 82452480 334794752  20% /vagrant)
+
+PLAY RECAP *********************************************************************
+ebisugawa                  : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+nijyo                      : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+oike                       : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+oshikoji                   : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+takeyamachi                : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+

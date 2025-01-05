@@ -1,0 +1,12 @@
+---
+- name: Check the "/etc/passwd" file.
+  ansible.builtin.shell:
+    cmd: "cat /etc/passwd | grep {{ item }}"
+  changed_when: no
+  failed_when:  result['rc'] not in [0, 1]
+  register: result
+- name: Register an account.
+  ansible.builtin.user:
+    name: "{{ item }}"
+  when: result['rc'] != 0
+  become: yes

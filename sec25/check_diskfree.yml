@@ -1,0 +1,19 @@
+---
+- name: Check the free disk space of each managed node.
+  hosts: all
+  gather_facts: no
+
+  tasks:
+    - name: Check the free space.
+      ansible.builtin.command:
+        cmd: "df"
+      changed_when: no
+      register: df_status
+    - name: Write down the free space information.
+      ansible.builtin.lineinfile:
+        path: "./{{ inventory_hostname }}.txt"
+        create: yes
+        line: "{{ item }}"
+        state: present
+      loop: "{{ df_status['stdout_lines'] }}"
+      delegate_to: localhost

@@ -1,0 +1,14 @@
+# Q2: ansible takeyamachi -i hosts.yml -a "cat /etc/passwd" > passwd.txt を実行した
+---
+- name: Register multiple accounts.
+  hosts: all
+  gather_facts: no
+
+  vars_files:
+    - ./accounts.yml
+
+  tasks:
+    - name: Registe account.
+      ansible.builtin.include_tasks:
+        file: ./register_account.yml
+      loop: "{{ accounts }}"

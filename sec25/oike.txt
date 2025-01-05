@@ -1,0 +1,11 @@
+Filesystem                                        1K-blocks     Used Available Use% Mounted on
+udev                                                 232264        0    232264   0% /dev
+tmpfs                                                 49496     2232     47264   5% /run
+/dev/vda1                                          20465232  1575160  17825164   9% /
+tmpfs                                                247464        0    247464   0% /dev/shm
+tmpfs                                                  5120        0      5120   0% /run/lock
+tmpfs                                                247464        0    247464   0% /sys/fs/cgroup
+tmpfs                                                 49492        0     49492   0% /run/user/1000
+192.168.121.1:/home/bin101/code/ansible_exercises 439653376 82450432 334796800  20% /vagrant
+192.168.121.1:/home/bin101/code/ansible_exercises 439653376 82452480 334794752  20% /vagrant
+/dev/vda1                                          20465232  1575164  17825160   9% /
