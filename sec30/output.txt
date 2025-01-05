@@ -1,0 +1,13 @@
+
+PLAY [Register a user account.] ************************************************
+
+TASK [Register an account.] ****************************************************
+changed: [takeyamachi] => (item=zoe)
+changed: [takeyamachi] => (item=alice)
+changed: [takeyamachi] => (item=matilda)
+changed: [takeyamachi] => (item=steve)
+changed: [takeyamachi] => (item=justin)
+
+PLAY RECAP *********************************************************************
+takeyamachi                : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+

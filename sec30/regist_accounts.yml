@@ -1,0 +1,16 @@
+---
+- name: Register a user account. # ssh zoe@192.168.111.102 -> passwordはpassword@zoeでログイン成功
+  hosts: all
+  gather_facts: no
+
+  vars_files:
+    - accounts.yml
+
+  tasks:
+    - name: Register an account.
+      ansible.builtin.user:
+        name: "{{ item }}"
+        password: "{{ lookup('csvfile', '{{ item }} file=password.csv delimiter=, col=1') | password_hash('sha512', 65534 | random(seed=inventory_hostname) | string) }}"
+        state: present
+      loop: "{{ accounts }}"
+      become: yes
