@@ -1,0 +1,12 @@
+[31m[34m]8;;https://ansible.readthedocs.io/projects/lint/rules/yaml/\yaml[truthy]]8;;\[0m[1;30m:[0m [31mTruthy value should be one of [false, true][0m
+[35m~/code/ansible_exercises/sec30/regist_accounts.yml[0m:4
+[0m
+[31m[34m]8;;https://ansible.readthedocs.io/projects/lint/rules/yaml/\yaml[line-length]]8;;\[0m[1;30m:[0m [31mLine too long (169 > 160 characters)[0m
+[35m~/code/ansible_exercises/sec30/regist_accounts.yml[0m:13
+[0m
+[31m[34m]8;;https://ansible.readthedocs.io/projects/lint/rules/yaml/\yaml[new-line-at-end-of-file]]8;;\[0m[1;30m:[0m [31mNo new line character at the end of file[0m
+[35m~/code/ansible_exercises/sec30/regist_accounts.yml[0m:16
+[0m
+[31m[34m]8;;https://ansible.readthedocs.io/projects/lint/rules/yaml/\yaml[truthy]]8;;\[0m[1;30m:[0m [31mTruthy value should be one of [false, true][0m
+[35m~/code/ansible_exercises/sec30/regist_accounts.yml[0m:16
+[0m
