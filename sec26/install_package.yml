@@ -1,0 +1,40 @@
+---
+- name: Install multiple packages. # ansible-playbook -i hosts.yml -t apache install_package.yml > output.txt を実行した
+  hosts: all
+  gather_facts: no
+  become: yes
+
+  tasks:
+    - name: Register a repository for Webmin.
+      ansible.builtin.blockinfile:
+        path: "/etc/yum.repos.d/webmin.repo"
+        create: yes
+        block: |
+          [webmin]
+          name=Webmin Repository
+          baseurl=http://download.webmin.com/download/yum/
+          gpgcheck=1
+          enabled=1
+          gpgkey=http://www.webmin.com/jcameron-key.asc
+        state: present
+      tags: webmin
+    - name: Install the perl-Net-SSLeay module.
+      ansible.builtin.dnf:
+        name: perl-Net-SSLeay
+        state: present
+      tags: webmin
+    - name: Install the Webmin module.
+      ansible.builtin.dnf:
+        name: webmin
+        state: present
+      tags: webmin
+    - name: Install the httpd module.
+      ansible.builtin.dnf:
+        name: httpd
+        state: present
+      tags: apache
+    - name: Start httpd service.
+      ansible.builtin.systemd:
+        name: httpd.service
+        state: started
+      tags: apache
