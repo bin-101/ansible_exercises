@@ -1,0 +1,15 @@
+---
+- name: Install multiple packages.
+  hosts: all
+  gather_facts: no
+  become: yes
+
+  tasks:
+    - name: webmin
+      ansible.builtin.import_role:
+        name: webmin
+      tags: webmin
+    - name: apache
+      ansible.builtin.import_role:
+        name: apache
+      tags: apache

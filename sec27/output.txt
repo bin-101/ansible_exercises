@@ -1,0 +1,9 @@
+
+PLAY [Install multiple packages.] **********************************************
+
+TASK [apache : Install the httpd module.] **************************************
+fatal: [takeyamachi]: FAILED! => {"ansible_facts": {"pkg_mgr": "apt"}, "changed": false, "msg": ["Could not detect which major revision of dnf is in use, which is required to determine module backend.", "You should manually specify use_backend to tell the module whether to use the dnf4 or dnf5 backend})"]}
+
+PLAY RECAP *********************************************************************
+takeyamachi                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
